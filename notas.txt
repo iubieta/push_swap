@@ -1,0 +1,81 @@
+NOTAS SUBJECT:
+	
+	OBJETIVO:
+	Mostrar la lista de instrucciones más corta posible para ordenar el stack A 
+	de menor a mayor, donde el número menor se sitúe en la cima del stack.
+	
+	2 stacks disponibles (a y b)
+
+	OPERACIONES:
+		
+		- sa : swap a0-a1
+		- sb : swap b0-b1
+		- ss : sa + sb
+
+		- pa : push b0->a0
+		- pb : push a0->b0
+		
+		- ra : rotate up (a0->aN, aN->aN-1, ...)
+		- rb : rotate up (a0->aN, aN->aN-1, ...)
+		- rr : ra + rb
+
+		- rra : rotate down (aN->a0, a0->a1, ...)
+		- rrb : rotate down (a0->aN, aN->aN-1, ...)
+		- rrr : rra + rrb
+	
+	ARCHIVOS:
+
+		- Makefile
+		- Libreria: *.h
+		- Codigo: *.c
+
+	ARGUMENTOS: 	Stack A = lista de numeros enteros (no repetidos)
+	
+	FUNCIONES AUTORIZADAS:
+
+		- read, write, malloc, free, exit.
+		- ft_printf o similar (personal)
+		- libft
+
+	CONDICIONES:
+
+		- Las instrucciones deben separarse utilizando un “\n” y nada más.
+		- Si no se especifican parámetros: no mostrar nada y devolver el control al usuario.
+		- En caso de error, mostrar "Error" seguido de un “\n” en la salida de errores estándar.
+			Errores:
+			- argumentos que no son enteros
+			- argumentos superiores a un número entero
+			- números duplicados
+
+ORGANIZACION / TAREAS:
+
+	- Crear Makefile
+	- Gestion de errores y argumentos
+	- Definir algoritmo:
+
+		MECHANICAL TURK:
+			
+			1.Mover 2 numeros a B
+			2.Buscar el numero en A que se pueda poner en orden como Mayor en B con menos movimientos.
+				2.1.Calcular el numero de movimientos para el primer numero
+				2.2.Calcular con los siguientes
+				* Rotar ambos stacks seguidos = 1 solo movimiento (rr / rrr) *
+			3.Devolver los movimientos del numero mas rapido de colocar y colocarlo.
+			4.Repetir hasta quedarnos con 3 numeros en A
+			5.Ordenar A de menor a mayor
+			6.Colocar el numero mas alto en la cima
+			7.Pushear B a A 
+			8.Rotar A hasta que el numero mas bajo quede en la cima.
+
+	- Funciones necesarias:
+
+		- stack_len
+		- moves_calc (recursiva?)
+		- funcion para simular cada tipo de movimiento?
+
+JUEVES 15/02:
+	Planteamiento del proyecto: objetivos, condiciones, algoritmo y funciones necesarias.
+
+	EMPEZAR CON:
+		- .h
+		- Makefile
