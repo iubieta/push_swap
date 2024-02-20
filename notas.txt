@@ -49,72 +49,67 @@ NOTAS SUBJECT:
 
 ORGANIZACION / TAREAS:
 
+	- Definir gestion de errores (HECHO)
+	- Definir algoritmo (HECHO)
+	- Definir funciones
 	- Crear Makefile
-	- Gestion de errores y argumentos
-		
-		ARGUMENTOS:
-			- 0 argumentos -> FIN
-			- 1 argumento -> Evaluar
-			- +1 argumento -> Juntar en uno y Evaluar
-
-		ERRORES:
-			- Argumentos que no son enteros
-			- Numeros duplicados
-			- Numeros > entero
-
-
-	- Definir algoritmo:
-
-		MECHANICAL TURK:
-			
-			1.Mover 2 numeros a B
-			2.Buscar el numero en A que se pueda poner en orden como Mayor en B con menos movimientos.
-				2.1.Calcular el numero de movimientos para el primer numero
-				2.2.Calcular con los siguientes
-				* Rotar ambos stacks seguidos = 1 solo movimiento (rr / rrr) *
-			3.Devolver los movimientos del numero mas rapido de colocar y colocarlo.
-			4.Repetir hasta quedarnos con 3 numeros en A
-			5.Ordenar A de menor a mayor
-			6.Colocar el numero mas alto en la cima
-			7.Pushear B a A 
-			8.Rotar A hasta que el numero mas bajo quede en la cima.
-
-	- Funciones necesarias:
-
-		- error_check
-			- join_args
-			- str_to_int_array
-				- atoi?
-			- 
-		- stack_len
-		- moves_calc (recursiva?)
-		- funcion para simular cada tipo de movimiento?
-
-JUEVES 15/02:
-	Planteamiento del proyecto: objetivos, condiciones, algoritmo y funciones necesarias.
-
-	EMPEZAR CON:
-		- .h
-		- Makefile
-		- Gestion de errores
-
-LUNES 19/02:
 	
-	Notas:
-		- Usar linked_lists para stacks
+	
+	
+PROCESO:
 
-	Gestion de errores:
-		Opcion 1:
-			- 0 argumentos -> FIN
-			- 1 argumento -> Evaluar
-			- +1 argumento -> Juntar en uno y Evaluar
+	1.GESTION DE ERRORES:
+	
+		Comprobar que hay mas de un argumento
 		
-		Opcion 2:
-			- 0 argumentos -> FIN
-			- 1 argumento -> Evaluar
-			- +1 argumento -> Evaluar y siempre que no haya error juntar
+		SI: Comprobar argumentos
+				Comprobar argumento actual
+					Aislar siguiente elemento
 
-			PROCESO:
-			
+						Inicio = char != espacio
+						Final = char == espacio
 
+					Comprobar elemento actual
 
+						Elemento == int
+						Elemento > int
+						Elemento < int
+						Elemento repetido (existe en el stack final)
+						
+						CORRECTO: Añadir elemento al stack final y Repetir (i++)
+						INCORRECTO: imprimir ERROR y finalizar programa
+
+					FINAL: str[i] == \0
+
+				FINAL: i == numero de argumentos - 1
+		
+		NO: terminar programa
+	
+	2.PROGRAMA:
+
+ALGORITMO DE ORDENACION:
+	
+	MECHANICAL TURK:
+				
+		1.Mover 2 numeros a B
+		2.Buscar el numero en A que se pueda poner en orden como Mayor en B con menos movimientos.
+			2.1.Calcular el numero de movimientos para el primer numero
+			2.2.Calcular con los siguientes
+			* Rotar ambos stacks seguidos = 1 solo movimiento (rr / rrr) *
+		3.Devolver los movimientos del numero mas rapido de colocar y colocarlo.
+		4.Repetir hasta quedarnos con 3 numeros en A
+		5.Ordenar A de menor a mayor
+		6.Colocar el numero mas alto en la cima
+		7.Pushear B a A 
+		8.Rotar A hasta que el numero mas bajo quede en la cima.
+
+FUNCIONES
+
+	- error_checker
+		- get_number
+		- check_number
+		- push_number
+
+	- stack_len
+	- moves_calc (recursiva?)
+	- funcion para simular cada tipo de movimiento?
