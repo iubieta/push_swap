@@ -106,9 +106,13 @@ ALGORITMO DE ORDENACION:
 FUNCIONES
 
 	- error_checker
-		- get_number
-		- check_number
+		- next_element
+		- check_element
+			- is_number
+			- is_integer
+			- is_repeated
 		- push_number
+			- buscar info linked_lists
 
 	- stack_len
 	- moves_calc (recursiva?)

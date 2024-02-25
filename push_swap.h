@@ -13,6 +13,12 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libft.h"
+# include <stdio.h>
+# include "./libft/libft.h"
+
+int ft_checkErrors(int argc, char **argv);
+char	*ft_nextElement(char *element);
+int ft_checkElement(char *element);
+size_t	ft_strlen(const char *s);
 
 # endif

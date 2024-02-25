@@ -27,3 +27,23 @@ MARTES 20/02:
 	Cambios:
 		- Definido el proceso de gestion de errores
 		- Reorganizacion de notas en notas y changelog
+
+SABADO 24/02:
+
+	TAREAS:
+		- Funciones error_checker
+
+	Cambios:
+		- Funciones errores escritas (falta pushNumber)
+
+DOMINGO 25/02:
+
+	TAREAS:
+		- Comprobar funciones error
+		- Escribir pushNumber
+			- linked_lists
+
+	Cambios:
+		- Funciones ft_nextElement y ft_checkElement comprobadas
+
+	
