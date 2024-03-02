@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/02/19 19:30:42 by iubieta-         ###   ########.fr       */
+/*   Created: 2023/09/14 19:05:08 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/09/22 17:13:33 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+/* #include <stdio.h>
+#include <string.h> */
 
-# include <stdio.h>
-# include "./libft/libft.h"
+#include "libft.h"
 
-typedef struct int_list
+size_t	ft_strlen(const char *s)
 {
-	int	content;
-	struct int_list *next;
-} int_list;
+	size_t	count;
 
-int 	ft_checkErrors(int argc, char **argv, int_list **stack);
-char	*ft_nextElement(char *element);
-int 	ft_checkElement(char *element);
-size_t	ft_strlen(const char *s);
-void	ft_pushNumber(char *element, int_list **stack);
+	count = 0;
+	while (s[count] != '\0')
+		count++;
+	return (count);
+}
 
-# endif
+/* int main(void)
+{
+  char    *str =  "hola";
+  printf("Función original: %lu\n", strlen(str));
+  printf("Función propia:   %lu\n", ft_strlen(str));
+} */

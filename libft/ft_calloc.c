@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/02/19 19:30:42 by iubieta-         ###   ########.fr       */
+/*   Created: 2023/09/18 20:01:29 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/09/22 16:54:47 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+// #include <stdio.h>
+// #include <stdlib.h>
 
-# include <stdio.h>
-# include "./libft/libft.h"
+#include "libft.h"
 
-typedef struct int_list
+void	*ft_calloc(size_t num, size_t size)
 {
-	int	content;
-	struct int_list *next;
-} int_list;
+	unsigned char	*ptr;
+	size_t			i;
 
-int 	ft_checkErrors(int argc, char **argv, int_list **stack);
-char	*ft_nextElement(char *element);
-int 	ft_checkElement(char *element);
-size_t	ft_strlen(const char *s);
-void	ft_pushNumber(char *element, int_list **stack);
+	ptr = malloc(num * size);
+	if (!ptr)
+		return (0);
+	i = 0;
+	while (i < num * size)
+	{
+		ptr[i] = 0;
+		i++;
+	}
+	return (ptr);
+}
 
-# endif
+/* int main()
+{
+	return (0);
+} */

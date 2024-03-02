@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/02/19 19:30:42 by iubieta-         ###   ########.fr       */
+/*   Created: 2023/09/15 17:53:50 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/10/21 18:45:58 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+/* #include <string.h>
+#include <stdio.h> */
 
-# include <stdio.h>
-# include "./libft/libft.h"
+#include "libft.h"
 
-typedef struct int_list
+char	*ft_strchr(const char *s, int c)
 {
-	int	content;
-	struct int_list *next;
-} int_list;
+	char		ch;
+	char		*ptr;
 
-int 	ft_checkErrors(int argc, char **argv, int_list **stack);
-char	*ft_nextElement(char *element);
-int 	ft_checkElement(char *element);
-size_t	ft_strlen(const char *s);
-void	ft_pushNumber(char *element, int_list **stack);
+	ch = (char)c;
+	ptr = (char *)s;
+	while (*ptr != ch && *ptr != '\0')
+		ptr++;
+	if (*ptr == ch)
+		return (ptr);
+	else
+		return (0);
+}
 
-# endif
+/* int	main()
+{
+	char	str[50] = "String en el que buscar";
+	char	c = '\0';
+
+	printf("%s\n",strchr(str,c));
+	printf("%s\n",ft_strchr(str,c));
+} */

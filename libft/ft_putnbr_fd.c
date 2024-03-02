@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/02/19 19:30:42 by iubieta-         ###   ########.fr       */
+/*   Created: 2023/10/07 18:03:46 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/10/14 14:59:46 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdio.h>
-# include "./libft/libft.h"
-
-typedef struct int_list
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	content;
-	struct int_list *next;
-} int_list;
-
-int 	ft_checkErrors(int argc, char **argv, int_list **stack);
-char	*ft_nextElement(char *element);
-int 	ft_checkElement(char *element);
-size_t	ft_strlen(const char *s);
-void	ft_pushNumber(char *element, int_list **stack);
-
-# endif
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		if (n == -2147483648)
+		{
+			ft_putchar_fd('2', fd);
+			n = -147483648;
+		}
+		ft_putnbr_fd(n * -1, fd);
+	}
+	else if (n < 10)
+		ft_putchar_fd((char)n + 48, fd);
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + 48, fd);
+	}
+}

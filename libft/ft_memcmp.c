@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/02/19 19:30:42 by iubieta-         ###   ########.fr       */
+/*   Created: 2023/10/15 17:39:25 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/10/15 19:45:59 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdio.h>
-# include "./libft/libft.h"
-
-typedef struct int_list
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	content;
-	struct int_list *next;
-} int_list;
+	unsigned char	*str1;
+	unsigned char	*str2;
+	size_t			i;
 
-int 	ft_checkErrors(int argc, char **argv, int_list **stack);
-char	*ft_nextElement(char *element);
-int 	ft_checkElement(char *element);
-size_t	ft_strlen(const char *s);
-void	ft_pushNumber(char *element, int_list **stack);
-
-# endif
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	i = 0;
+	while (i < n)
+	{
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
+	}
+	return (0);
+}

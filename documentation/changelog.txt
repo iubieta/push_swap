@@ -1,0 +1,64 @@
+JUEVES 15/02:
+	Planteamiento del proyecto: objetivos, condiciones, algoritmo y funciones necesarias.
+
+	EMPEZAR CON:
+		- .h
+		- Makefile
+		- Gestion de errores
+
+LUNES 19/02:
+	
+	Notas:
+		- Usar linked_lists para stacks
+
+	Gestion de errores:
+		Opcion 1:
+			- 0 argumentos -> FIN
+			- 1 argumento -> Evaluar
+			- +1 argumento -> Juntar en uno y Evaluar
+		
+		Opcion 2:
+			- 0 argumentos -> FIN
+			- 1 argumento -> Evaluar
+			- +1 argumento -> Evaluar y siempre que no haya error juntar
+
+MARTES 20/02:
+
+	Cambios:
+		- Definido el proceso de gestion de errores
+		- Reorganizacion de notas en notas y changelog
+
+SABADO 24/02:
+
+	TAREAS:
+		- Funciones error_checker
+
+	Cambios:
+		- Funciones errores escritas (falta pushNumber)
+
+DOMINGO 25/02:
+
+	TAREAS:
+		- Comprobar funciones error
+
+	Cambios:
+		- Funciones ft_nextElement y ft_checkElement comprobadas
+
+	Seguir con:
+		- Escribir pushElement
+			- linked_lists
+
+LUNES 26/02:
+
+	Cambios:
+		- Escrita y comprobada ft_puhsNumber
+		- Añadido stack en argumentos ft_checkErrors
+
+SABADO 02/03:
+
+	Cambios:
+		- Corregidas ft_checkElement ft_nextElement
+		- Creadas y probadas funciones de listas
+	
+	Seguir con:
+		- Comprobacion numeros repetidos y enteros

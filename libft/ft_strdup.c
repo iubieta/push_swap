@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/02/19 19:30:42 by iubieta-         ###   ########.fr       */
+/*   Created: 2023/09/19 20:15:38 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/10/21 18:46:20 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+/* #include <string.h>
+#include <stdio.h>
+#include <stdlib.h> */
 
-# include <stdio.h>
-# include "./libft/libft.h"
+#include "libft.h"
 
-typedef struct int_list
+char	*ft_strdup(const char *s)
 {
-	int	content;
-	struct int_list *next;
-} int_list;
+	char	*s_copy;
 
-int 	ft_checkErrors(int argc, char **argv, int_list **stack);
-char	*ft_nextElement(char *element);
-int 	ft_checkElement(char *element);
-size_t	ft_strlen(const char *s);
-void	ft_pushNumber(char *element, int_list **stack);
+	s_copy = ft_calloc(sizeof(char), ft_strlen(s) + 1);
+	if (!s_copy)
+		return (0);
+	s_copy = ft_memcpy(s_copy, s, ft_strlen(s));
+	return (s_copy);
+}
 
-# endif
+/* int main()
+{
+	char s[50] = "Hola que tal";
+
+	printf("%s\n",strdup(s));
+	printf("%s\n",ft_strdup(s));
+} */
