@@ -33,14 +33,18 @@ void	ft_printList(int_list **list)
 	}
 }
 
-void ft_freeList(int_list **list) {
-    int_list *tmp;
-    while (*list != NULL) {
-        tmp = (*list)->next;
-        free(*list);
-        *list = tmp;
+int	ft_existsInList(int number, int_list *head)
+{
+    int_list *current_node = head;
+    while (current_node != NULL)
+	{
+        if (current_node->content == number)
+            return 1;
+        current_node = current_node->next;
     }
+    return 0;
 }
+
 
 
 void	ft_pushNumber(char *element, int_list **stack)

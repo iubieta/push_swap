@@ -3,6 +3,7 @@
 int ft_checkErrors(int argc, char **argv, int_list **stack)
 {
 	int     i;
+	int		num;
 	char    *argument;
 	char    *element;
 	t_list	*head;
@@ -25,10 +26,14 @@ int ft_checkErrors(int argc, char **argv, int_list **stack)
 		while (element)
 		{
 			if (ft_checkElement(element) == 1)
-			{	
-				printf("------PUSH NUMBER--------\n");
-				ft_pushNumber(element, stack);
-				printf("-------------------------\n");
+			{
+				num = ft_atoi(element);
+				if (ft_checkNumber(num, head))
+					{
+						printf("------PUSH NUMBER--------\n");
+						ft_pushNumber(element, stack);
+						printf("-------------------------\n");
+					}
 			}
 			else
 			{
@@ -84,4 +89,9 @@ int ft_checkElement(char *element)
 	}
 	//printf("OUT\n");
 	return (1);
+}
+
+int ft_checkNumber(int num)
+{
+	
 }

@@ -54,3 +54,11 @@ LUNES 26/02:
 		- Escrita y comprobada ft_puhsNumber
 		- Añadido stack en argumentos ft_checkErrors
 
+LUNES 04/03:
+
+	Cambios:
+		- Antes de pushear numero checkearlo
+
+	Seguir con :
+		- Modificar atoi para que compruebe si el numero esta dentro de los limites de int
+		- Terminar de escribir check_number
