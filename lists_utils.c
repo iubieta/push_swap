@@ -33,32 +33,21 @@ void	ft_printList(int_list **list)
 	}
 }
 
-int	ft_existsInList(int number, int_list *head)
+int	ft_existsInList(int number, int_list **stack)
 {
-    int_list *current_node = head;
-    while (current_node != NULL)
+    int_list *current_node;
+    
+	if (stack)
+		current_node = *stack;
+	else
+		return (0);
+	printf("-------ExistsInList------\n");
+	while (current_node != NULL)
 	{
         if (current_node->content == number)
-            return 1;
+            return (1);
         current_node = current_node->next;
     }
-    return 0;
-}
-
-
-
-void	ft_pushNumber(char *element, int_list **stack)
-{
-	int			number;
-	int_list	*node;
-
-	if (!stack)
-	{
-		stack = malloc(sizeof(int_list *));
-		if (stack == NULL)
-			return;
-	}
-	number = ft_atoi(element);
-	node = ft_lst_newNode(number);
-	ft_lst_addFront(stack, node);
+	printf("-------------------------\n");
+    return (0);
 }

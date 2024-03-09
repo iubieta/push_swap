@@ -6,15 +6,14 @@ void ft_freeList(int_list **list);
 int main(int argc, char **argv)
 {
     char        *str;
-    int_list    *stackA;
+    int_list    **stackA;
 
     stackA = NULL;
-    printf("-------CHECK ERRORS--------\n");
-    ft_checkErrors(argc, argv, &stackA);
-    printf("---------------------------\n");
+    ft_checkErrors(argc, argv, stackA);
+
     fflush(stdout);
 	sleep(1);
-    ft_printList(&stackA);
-    ft_freeList(&stackA);
+    if (stackA)
+        ft_printList(stackA);
     return (0);
 }

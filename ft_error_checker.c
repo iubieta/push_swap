@@ -2,12 +2,13 @@
 
 int ft_checkErrors(int argc, char **argv, int_list **stack)
 {
-	int     i;
-	int		num;
-	char    *argument;
-	char    *element;
-	t_list	*head;
+	int     	i;
+	int			num;
+	char    	*argument;
+	char    	*element;
+	// int_list	*head;
 	
+	printf("-------CHECK ERRORS------\n");
 	if (argc == 1)
 	{
 		printf("ERROR(0)\n");
@@ -25,26 +26,14 @@ int ft_checkErrors(int argc, char **argv, int_list **stack)
 		printf("Elemento: %s\n", element);
 		while (element)
 		{
-			if (ft_checkElement(element) == 1)
-			{
-				num = ft_atoi(element);
-				if (ft_checkNumber(num, head))
-					{
-						printf("------PUSH NUMBER--------\n");
-						ft_pushNumber(element, stack);
-						printf("-------------------------\n");
-					}
-			}
-			else
-			{
-				printf("ERROR(1)\n");
-				return (0);
-			}
+			if(ft_checkPush(element, stack) == 0)
+				return(0);
 			element = ft_nextElement(element);
 			printf("Elemnto: %s\n", element);
 		}
 		i++;
 	}
+	printf("-------------------------\n");
 }
 
 char	*ft_nextElement(char *element)
@@ -72,10 +61,43 @@ char	*ft_nextElement(char *element)
 	return (&element[i]);
 }
 
+// Checkear string, checkear num=int, checkear num no repetido
+int	ft_checkPush(char *element, int_list **stack)
+{
+	long		number;
+	int_list	*node;
+
+	printf("-------CHECK PUSH--------\n");
+	if (ft_checkElement(element) == 0)
+	{
+		printf("ERROR 1\n");
+		return(0);
+	}
+	number = ft_atol(element);
+	if (number < INT_MIN || number > INT_MAX)
+	{
+		printf("ERROR 2\n");
+		return(0);
+	}
+	if (stack)
+	{
+		if (ft_existsInList((int)number, stack) == 1)
+		{
+			printf("ERROR 3\n");
+			return(0);
+		}
+		node = ft_lst_newNode(number);
+		ft_lst_addFront(stack, node);
+	}
+	printf("-------------------------\n");
+	return(1);
+}
+
 int ft_checkElement(char *element)
 {
 	int i;
 	
+	printf("-------CHECK ELEMENT-----\n");
 	i = 0;
 	if (element[0] == '-' || element[0] == '+')
 		i++;
@@ -88,10 +110,6 @@ int ft_checkElement(char *element)
 			return (0);
 	}
 	//printf("OUT\n");
+	printf("-------------------------\n");
 	return (1);
-}
-
-int ft_checkNumber(int num)
-{
-	
 }

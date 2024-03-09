@@ -62,3 +62,18 @@ LUNES 04/03:
 	Seguir con :
 		- Modificar atoi para que compruebe si el numero esta dentro de los limites de int
 		- Terminar de escribir check_number
+
+SABADO 09/03:
+
+	Cambios:
+		- check_number descartado
+		- sustituido atoi por atol (trabajar con longs) para comprobar tamaño (num = int)
+		- funcion ft_checkPush : Agrupa comprobacion de elemento y pusheralo
+			- pushNumber ahora en ft_checkPush
+		- todas las funciones que trabajan con la lista tienen como parametro (int_list **stack)
+
+	Notas:
+		- que pasa si metemos numeros directamente??
+
+	Seguir con:
+		- comprobar push en check_push
