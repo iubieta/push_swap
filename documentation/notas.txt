@@ -108,7 +108,8 @@ FUNCIONES
 	- error_checker
 		- next_element
 		- check_element
-			- is_number
+			- Solo hay numeros hasta el siguiente elemento
+		- check_number
 			- is_integer
 			- is_repeated
 		- push_number

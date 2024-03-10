@@ -2,14 +2,14 @@
 
 int ft_checkErrors(int argc, char **argv, int_list **stack)
 {
-	int     i;
-	char    *argument;
-	char    *element;
-	t_list	*head;
+	int     	i;
+	int			num;
+	char    	*argument;
+	char    	*element;
 	
 	if (argc == 1)
 	{
-		printf("ERROR(0)\n");
+		printf("ERROR(0): No hay argumentos\n");
 		return (0);
 	}
 	i = 1;
@@ -24,19 +24,10 @@ int ft_checkErrors(int argc, char **argv, int_list **stack)
 		printf("Elemento: %s\n", element);
 		while (element)
 		{
-			if (ft_checkElement(element) == 1)
-			{	
-				printf("------PUSH NUMBER--------\n");
-				ft_pushNumber(element, stack);
-				printf("-------------------------\n");
-			}
-			else
-			{
-				printf("ERROR(1)\n");
-				return (0);
-			}
+			if(ft_checkPush(element, stack) == 0)
+				return(0);
 			element = ft_nextElement(element);
-			printf("Elemnto: %s\n", element);
+			printf("Elemento: %s\n", element);
 		}
 		i++;
 	}
@@ -54,10 +45,7 @@ char	*ft_nextElement(char *element)
 		if (ft_isdigit(element[i]))
 			i++;
 		else
-		{
-			printf("ERROR(1)");
 			return (NULL);
-		}
 	}
 	while (element[i] == ' ' || element[i] == '\t' || element[i] == '\n'
 		|| element[i] == '\r' || element[i] == '\v' || element[i] == '\f' )
@@ -65,6 +53,34 @@ char	*ft_nextElement(char *element)
 	if (element[i] == '\0')
 		return (NULL);
 	return (&element[i]);
+}
+
+// Checkear string, checkear num=int, checkear num no repetido
+int	ft_checkPush(char *element, int_list **stack)
+{
+	long		number;
+	int_list	*node;
+
+	if (ft_checkElement(element) == 0)
+	{
+		printf("ERROR (1): fallo en el string\n");
+		return(0);
+	}
+	number = ft_atol(element);
+	if (number < INT_MIN || number > INT_MAX)
+	{
+		printf("ERROR (2): numero no entero\n");
+		return(0);
+	}
+	if (ft_existsInList((int)number, *stack) == 1)
+	{
+		printf("ERROR (3): numero repetido\n");
+		return(0);
+	}
+	node = ft_lst_newNode((int)number);
+	printf("New node: %i\n", node->content);
+	ft_lst_addFront(stack, node);
+	return(1);
 }
 
 int ft_checkElement(char *element)
@@ -76,12 +92,10 @@ int ft_checkElement(char *element)
 		i++;
 	while (element[i] && ft_isalnum(element[i]))
 	{
-		//printf("IN\n");
 		if (ft_isdigit(element[i]))
 			i++;
 		else
 			return (0);
 	}
-	//printf("OUT\n");
 	return (1);
 }

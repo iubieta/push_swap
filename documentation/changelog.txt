@@ -54,3 +54,43 @@ LUNES 26/02:
 		- Escrita y comprobada ft_puhsNumber
 		- Añadido stack en argumentos ft_checkErrors
 
+LUNES 04/03:
+
+	Cambios:
+		- Antes de pushear numero checkearlo
+
+	Seguir con :
+		- Modificar atoi para que compruebe si el numero esta dentro de los limites de int
+		- Terminar de escribir check_number
+
+SABADO 09/03:
+
+	Cambios:
+		- check_number descartado
+		- sustituido atoi por atol (trabajar con longs) para comprobar tamaño (num = int)
+		- funcion ft_checkPush : Agrupa comprobacion de elemento y pusheralo
+			- pushNumber ahora en ft_checkPush
+		- todas las funciones que trabajan con la lista tienen como parametro (int_list **stack)
+
+	Notas:
+		- que pasa si metemos numeros directamente??
+
+	Seguir con:
+		- comprobar push en check_push
+
+DOMINGO 10/03:
+
+	Cambios:
+		- modificados los parametros de las funciones de listas:
+			Si modifican la lista -> int_list **list
+			Si solo iteran o imprimen -> int list *head
+		- rehecho checkErrors_main.c: inicializado stackA y headA y comprobar su liberacion
+		- Añadido ft_freeList para liberar la lista en caso de error
+		- Eliminada comprobacion de stack(innecesaria) de check_push y otras funciones
+		- renombrado archivo de gestion de errores: ft_check_errors -> error_handling
+		- GESTION DE ERRORES TERMINADA!!
+	
+	Seguir con:
+		- limpiar lineas de debug?
+		- Planteamiento de algoritmo y busqueda de optimizacion
+	
