@@ -77,3 +77,20 @@ SABADO 09/03:
 
 	Seguir con:
 		- comprobar push en check_push
+
+DOMINGO 10/03:
+
+	Cambios:
+		- modificados los parametros de las funciones de listas:
+			Si modifican la lista -> int_list **list
+			Si solo iteran o imprimen -> int list *head
+		- rehecho checkErrors_main.c: inicializado stackA y headA y comprobar su liberacion
+		- Añadido ft_freeList para liberar la lista en caso de error
+		- Eliminada comprobacion de stack(innecesaria) de check_push y otras funciones
+		- renombrado archivo de gestion de errores: ft_check_errors -> error_handling
+		- GESTION DE ERRORES TERMINADA!!
+	
+	Seguir con:
+		- limpiar lineas de debug?
+		- Planteamiento de algoritmo y busqueda de optimizacion
+	

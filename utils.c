@@ -6,7 +6,6 @@ long	ft_atol(const char *s)
 	unsigned long	number;
 	int		sign;
 
-	printf("---------ATOL------------\n");
 	i = 0;
 	sign = 1;
 	number = 0;
@@ -26,6 +25,5 @@ long	ft_atol(const char *s)
 		i++;
 	}
 	i++;
-	printf("-------------------------\n");
 	return (number * sign);
 }
