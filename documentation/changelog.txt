@@ -93,4 +93,20 @@ DOMINGO 10/03:
 	Seguir con:
 		- limpiar lineas de debug?
 		- Planteamiento de algoritmo y busqueda de optimizacion
-	
+		- Makefile?
+		- Comentar funciones etc.
+		- Pasar norminette
+
+HITO: Gestion de errores TERMINADA
+
+DOMINGO 10/03:
+
+	Cambios:
+		- quitados printf de debug
+		- pasada norminette a medias (falta cambiar nombres con mayusculas)
+		- funciones comentadas
+		- Cambiados nombres de funciones y variables
+
+	Seguir con:
+		- cambiar printf por ft_printf
+		- Crear funciones de movimientos de stacks

@@ -3,14 +3,14 @@
 int main(int argc, char **argv)
 {
 	char        *str;
-	int_list    **stackA;
-	int_list    *headA;
+	t_list    **stackA;
+	t_list    *headA;
 
 	headA = NULL;
 	stackA = &headA;
-	if (ft_checkErrors(argc, argv, stackA) == 0)
+	if (ft_check_errors(argc, argv, stackA) == 0)
 		{
-			ft_freeList(stackA);
+			ft_free_list(stackA);
 			stackA = NULL;
 			printf("%p\n",headA);
 			printf("%p\n",stackA);
@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	if (stackA)
 	{
 		printf("StackA:\n");
-		ft_printList(headA);
+		ft_prt_list(headA);
 	}
 	else
 		printf("STACK_A LIBERADO\n");
