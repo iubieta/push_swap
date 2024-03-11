@@ -114,4 +114,5 @@ DOMINGO 10/03:
 LUNES 11/03:
 
 	Cambios:
-		- funciones stack_ops (swap, push, rot_up)
+		- funciones stack_ops (swap, push, rot_up, rot_down)
+		
