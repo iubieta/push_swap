@@ -110,3 +110,8 @@ DOMINGO 10/03:
 	Seguir con:
 		- cambiar printf por ft_printf
 		- Crear funciones de movimientos de stacks
+
+LUNES 11/03:
+
+	Cambios:
+		- funciones stack_ops (swap, push, rot_up)

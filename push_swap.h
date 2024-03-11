@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/02/19 19:30:42 by iubieta-         ###   ########.fr       */
+/*   Updated: 2024/03/11 14:52:45 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int			ft_check_element(char *element);
 long		ft_atol(const char *s);
 t_list		*ft_lst_new_node(int content);
 void		ft_lst_add_front(t_list **list, t_list *node);
-void		ft_prt_list(t_list *head);
+void		ft_print_list(t_list *head);
 void		ft_free_list(t_list **list);
 int			ft_exists_in_list(int number, t_list *head);
 

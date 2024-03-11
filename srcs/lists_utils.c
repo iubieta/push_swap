@@ -36,7 +36,7 @@ void	ft_lst_add_front(t_list **list, t_list *node)
 }
 
 //Imprime una lista
-void	ft_prt_list(t_list *head)
+void	ft_print_list(t_list *head)
 {
 	t_list	*node;
 
