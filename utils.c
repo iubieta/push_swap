@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+//pasa un string a tipo long
 long	ft_atol(const char *s)
 {
 	size_t			i;

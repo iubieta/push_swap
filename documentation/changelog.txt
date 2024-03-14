@@ -115,4 +115,19 @@ LUNES 11/03:
 
 	Cambios:
 		- funciones stack_ops (swap, push, rot_up, rot_down)
+
+	Seguir con:
+		- cambiar printf por ft_printf
+		- comprobar stack_ops
+
+JUEVES 14/03:
+
+	- Funciones stack_ops comprobadas
+	- Cambiado printf por ft_printf
+	
+	Seguir con:
+		- Cambiar prints de error a salida de errores?
+		- Algoritmo...
+		- funcion para Calcular movimientos necesarios para ordenacion
+
 		

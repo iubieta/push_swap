@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 //Crea un nodo de tipo t_list
 t_list	*ft_lst_new_node(int content)
@@ -43,7 +43,7 @@ void	ft_print_list(t_list *head)
 	node = head;
 	while (node != NULL)
 	{
-		printf("%i\n", node->content);
+		ft_printf("%i\n", node->content);
 		node = node->next;
 	}
 }

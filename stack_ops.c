@@ -12,12 +12,13 @@
 
 #include "push_swap.h"
 
+//intercambia los dos primeros nodos
 void	ft_swap_head(t_list **list)
 {
 	t_list	*head;
 	t_list	*next;
 
-	if (*list == NULL || *list->next == NULL)
+	if (*list == NULL || (*list)->next == NULL)
 		return ;
 	head = *list;
 	next = head->next;
@@ -26,25 +27,27 @@ void	ft_swap_head(t_list **list)
 	*list = next;
 }
 
+//pushea un nodo de una lista a otra 
 void	ft_push_between_lists(t_list **origin, t_list **destiny)
 {
 	t_list	*origin_head;
+	t_list	*del;
 
-	if (*origin == NULL)
+	if (*origin == NULL )
 		return ;
 	origin_head = *origin;
-	if (origin_head->next != NULL)
-		*origin = origin_head->next;
+	*origin = origin_head->next;
 	origin_head->next = *destiny;
 	*destiny = origin_head;
 }
 
+//rota la lista hacia arriba
 void	ft_rotate_up(t_list **list)
 {
 	t_list	*head;
 	t_list	*node;
 
-	if (*list == NULL || head->next == NULL)
+	if (*list == NULL || (*list)->next == NULL)
 		return ;
 	head = *list;
 	*list = head->next;
@@ -55,12 +58,13 @@ void	ft_rotate_up(t_list **list)
 	head->next = NULL;
 }
 
+//rota la lista hacia abajo
 void	ft_rotate_down(t_list **list)
 {
 	t_list	*prev;
 	t_list	*last;
 
-	if (*list == NULL || *list->next == NULL)
+	if (*list == NULL || (*list)->next == NULL)
 		return ;
 	prev = NULL;
 	last = *list;
