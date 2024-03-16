@@ -130,4 +130,14 @@ JUEVES 14/03:
 		- Algoritmo...
 		- funcion para Calcular movimientos necesarios para ordenacion
 
-		
+SABADO 16/03:
+
+	Cambios:
+		- Planteado algoritmo mechanical_turk en forma de Codigo
+		- Escritas algunas de sus funciones (list_len, list_min)
+		- Renombrados archivos list_utils y stack_ops->list_ops
+
+	Seguir con:
+		- Terminar funciones mechanical_turk
+		- Comprobar funciones mechanical_turk
+		- Cambiar prints de error a salida de errores?

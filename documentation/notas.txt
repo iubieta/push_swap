@@ -54,8 +54,6 @@ ORGANIZACION / TAREAS:
 	- Definir funciones
 	- Crear Makefile
 	
-	
-	
 PROCESO:
 
 	1.GESTION DE ERRORES:
@@ -103,6 +101,7 @@ ALGORITMO DE ORDENACION:
 		7.Pushear B a A 
 		8.Rotar A hasta que el numero mas bajo quede en la cima.
 
+
 FUNCIONES
 
 	- error_checker
@@ -117,4 +116,5 @@ FUNCIONES
 
 	- stack_len
 	- moves_calc (recursiva?)
+		
 	- funcion para simular cada tipo de movimiento?
