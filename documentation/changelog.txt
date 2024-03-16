@@ -134,10 +134,11 @@ SABADO 16/03:
 
 	Cambios:
 		- Planteado algoritmo mechanical_turk en forma de Codigo
-		- Escritas algunas de sus funciones (list_len, list_min)
+		- Escritas algunas de sus funciones (list_len, list_min, list_max, sort_three)
 		- Renombrados archivos list_utils y stack_ops->list_ops
 
 	Seguir con:
 		- Terminar funciones mechanical_turk
-		- Comprobar funciones mechanical_turk
+			- Definir calculo de movimientos, etc
+		- Comprobar funciones escritas
 		- Cambiar prints de error a salida de errores?

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lists_utils_2.c                                    :+:      :+:    :+:   */
+/*   ft_sort_up.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,55 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-int	ft_list_len(t_list *head)
+void	ft_sort_three(t_list **list)
 {
-	int		len;
-	t_list	*node;
-
-	len = 0;
-	node = head;
-	while (node != NULL)
+	if (ft_list_min(*list) == *list->content)
 	{
-		len++;
-		node = node->next;
+		ft_swap_head(list);
+		ft_rotate_up(list);
 	}
-	return (len);
-}
-
-int ft_list_min(t_list *head)
-{
-	int		min;
-	t_list	*node;
-
-	if (head == NULL)
-		return (INT_MAX);
-	min = head->content;
-	node = head;
-	while (node != NULL)
+	else if (ft_list_max(*list) == *list-> content)
 	{
-		if (node->content < min)
-			min = node->content;
-		node = node->next;
+		ft_rotate_up(list);
+		if (ft_sorted(*list) == 0)
+			ft_swap_head(list);
 	}
-	return (min);	
-}
-
-int ft_list_max(t_list *head)
-{
-	int		max;
-	t_list	*node;
-
-	if (head == NULL)
-		return (INT_MIN);
-	max = head->content;
-	node = head;
-	while (node != NULL)
+	else
 	{
-		if (node->content > max)
-			max = node->content;
-		node = node->next;
+		if ((*list)->content > ((*list)->next)->content)
+			ft_swap_head(list);
+		else
+			ft_rotate_down(list);
 	}
-	return (max);	
+	
 }
