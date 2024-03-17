@@ -99,7 +99,7 @@ int	ft_check_push(char *element, t_list **stack)
 		return (0);
 	}
 	node = ft_lst_new_node((int)number);
-	ft_printf("New node: %i\n", node->content);
+	//ft_printf("New node: %i\n", node->content);
 	ft_lst_add_front(stack, node);
 	return (1);
 }

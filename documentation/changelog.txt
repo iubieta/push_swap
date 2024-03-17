@@ -142,3 +142,9 @@ SABADO 16/03:
 			- Definir calculo de movimientos, etc
 		- Comprobar funciones escritas
 		- Cambiar prints de error a salida de errores?
+
+DOMINGO 17/03:
+
+	Cambios:
+		- Comprobadas list_min, list_max, list_len, sorted, sort_three
+		

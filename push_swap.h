@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/03/16 20:21:07 by marvin           ###   ########.fr       */
+/*   Updated: 2024/03/17 12:16:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ void	ft_rotate_down(t_list **list);
 int		ft_list_len(t_list *head);
 int 	ft_list_min(t_list *head);
 int 	ft_list_max(t_list *head);
+void	ft_sort_three(t_list **list);
+int		ft_sorted(t_list *head);
 
 #endif

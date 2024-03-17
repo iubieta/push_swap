@@ -14,12 +14,12 @@
 
 void	ft_sort_three(t_list **list)
 {
-	if (ft_list_min(*list) == *list->content)
+	if (ft_list_min(*list) == (*list)->content)
 	{
 		ft_swap_head(list);
 		ft_rotate_up(list);
 	}
-	else if (ft_list_max(*list) == *list-> content)
+	else if (ft_list_max(*list) == (*list)->content)
 	{
 		ft_rotate_up(list);
 		if (ft_sorted(*list) == 0)
@@ -32,5 +32,20 @@ void	ft_sort_three(t_list **list)
 		else
 			ft_rotate_down(list);
 	}
-	
+}
+
+int ft_sorted(t_list *head)
+{
+	t_list	*node;
+
+
+	node = head;
+	while (node->next != NULL)
+	{
+		if (node->content < (node->next)->content)
+			node = node->next;
+		else
+			return (0);
+	}
+	return (1);
 }
