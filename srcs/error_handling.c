@@ -35,7 +35,6 @@ int	ft_check_errors(int argc, char **argv, t_list **stack)
 			if (ft_check_push(element, stack) == 0)
 				return (0);
 			element = ft_next_element(element);
-			//printf("Elemento: %s\n", element);
 		}
 	}
 }
@@ -99,7 +98,6 @@ int	ft_check_push(char *element, t_list **stack)
 		return (0);
 	}
 	node = ft_lst_new_node((int)number);
-	//ft_printf("New node: %i\n", node->content);
 	ft_lst_add_front(stack, node);
 	return (1);
 }

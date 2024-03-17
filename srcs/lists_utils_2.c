@@ -12,6 +12,7 @@
 
 #include "../push_swap.h"
 
+//Calcula la longitud de la lista
 int	ft_list_len(t_list *head)
 {
 	int		len;
@@ -27,7 +28,8 @@ int	ft_list_len(t_list *head)
 	return (len);
 }
 
-int ft_list_min(t_list *head)
+//Devuelve el numero mas pequeño de una lista
+int	ft_list_min(t_list *head)
 {
 	int		min;
 	t_list	*node;
@@ -42,10 +44,11 @@ int ft_list_min(t_list *head)
 			min = node->content;
 		node = node->next;
 	}
-	return (min);	
+	return (min);
 }
 
-int ft_list_max(t_list *head)
+//Devuelve el numero mas grande de una lista
+int	ft_list_max(t_list *head)
 {
 	int		max;
 	t_list	*node;
@@ -60,5 +63,5 @@ int ft_list_max(t_list *head)
 			max = node->content;
 		node = node->next;
 	}
-	return (max);	
+	return (max);
 }

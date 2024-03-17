@@ -147,4 +147,9 @@ DOMINGO 17/03:
 
 	Cambios:
 		- Comprobadas list_min, list_max, list_len, sorted, sort_three
-		
+		- medio planteado calculo de movimientos
+		- escritas funciones (moves_up, moves_down, moves_to_top)
+
+	Seguir con:
+		- Escribir funciones de calculos de movimientos combinados (rarb, rarrb, rrarb, rrarrb)
+		- comprobar funciones

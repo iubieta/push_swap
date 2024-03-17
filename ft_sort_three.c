@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+//Ordena cualquier lista de 3 numeros
 void	ft_sort_three(t_list **list)
 {
 	if (ft_list_min(*list) == (*list)->content)
@@ -34,10 +35,10 @@ void	ft_sort_three(t_list **list)
 	}
 }
 
-int ft_sorted(t_list *head)
+//Comprueba que la lista esta ordenada
+int	ft_sorted(t_list *head)
 {
 	t_list	*node;
-
 
 	node = head;
 	while (node->next != NULL)

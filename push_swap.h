@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/03/17 12:16:31 by marvin           ###   ########.fr       */
+/*   Updated: 2024/03/17 13:13:29 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <limits.h>
 # include "./srcs/libft/libft.h"
 # include "./srcs/printf/ft_printf.h"
-
 
 typedef struct s_list
 {
@@ -41,8 +40,8 @@ void	ft_push_between_lists(t_list **origin, t_list **destiny);
 void	ft_rotate_up(t_list **list);
 void	ft_rotate_down(t_list **list);
 int		ft_list_len(t_list *head);
-int 	ft_list_min(t_list *head);
-int 	ft_list_max(t_list *head);
+int		ft_list_min(t_list *head);
+int		ft_list_max(t_list *head);
 void	ft_sort_three(t_list **list);
 int		ft_sorted(t_list *head);
 

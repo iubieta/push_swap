@@ -22,7 +22,7 @@ void	ft_mechanical_turk(t_list **stack_A, t_list stack_B)
 	i = 0;
 	while (i < ft_list_len(*stack_A) - 3)
 	{
-		fastest_number = ft_fastest_number(stack_A, stack_B);
+		fastest_number = ft_fastest_number(*stack_A, *stack_B);
 		ft_sort_number(stack_A, stack_B, fastest_number);
 		i++;
 	}
@@ -39,19 +39,45 @@ void	ft_mechanical_turk(t_list **stack_A, t_list stack_B)
 	ft_sort_three(stack_A);
 }
 
-int	ft_fastest_number(t_list **stack_A, t_list **stack_B)
+int	ft_fastest_number(t_list *head_A, t_list *head_B)
 {
 	t_list	*node;
+	int		number;
+	int		fastest;
+	int		moves;
+	int		min_moves;
+	
+	node = head_A;
+	fastest = node->content;
+	min_moves = INT_MAX;
 	while (node != NULL)
 	{
-		
+		number = node->content;
+		moves = ft_moves(head_A, head_B, number);
+		if (moves < min_moves)
+		{
+			min_moves = moves;
+			fastest = number;
+		}
+		node = node->next;
 	}
-	
+	return (fastest);
 }
 
-int	ft_moves(t_list **stack_A, t_list **stack_B, int number)
+int	ft_find_place_in_B(t_list *head, int number)
 {
-	//Trabajar con una copia de los stacks
+	t_list	*node;
+	int		number_below;
+
+	node = head;
+	number_below = ft_list_min(head);
+	while(node != NULL)
+	{
+		if (node->content < number && node->content > number_below)
+			number_below = node->content;
+		node = node->next;
+	}
+	return (number_below);
 }
 
 void	ft_sort_number(t_list **stack_A, t_list **stack_B, int number)

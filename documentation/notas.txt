@@ -114,7 +114,7 @@ FUNCIONES
 		- push_number
 			- buscar info linked_lists
 
-	- stack_len
-	- moves_calc (recursiva?)
-		
-	- funcion para simular cada tipo de movimiento?
+	- ft_moves (recursiva?)
+		- buscar numero a colocar en headB para que el de A qude en buena posicion (numero inmediatamente menor que nA o maxB)
+		- calcular movimientos para colocar uno de los dos numeros en top (para cada sentido: rarb, rarrb, rrarb, rrarrb)
+		- calcular movimientos para colocar el que falte(para cada sentido)
