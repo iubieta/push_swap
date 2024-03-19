@@ -160,7 +160,10 @@ MARTES 19/03:
 		- Escritas funciones de calculo de movimientos (moves_calc y moves_comb)
 		- Cambios en ft_moves y mechanical_turk (parametros y parte del funcionamiento)
 		- Probada funcion ft_moves por encima
+		- Pasada norminette
+		- Idea para aplicar e imprimir movimientos ("copia" calculo movimientos combinados)
 		
 	Seguir con:
 		- Probar bien ft_moves y/o subfunciones
 		- Pensar en como imprimir movimientos
+		- Hacer EXAMEN!!!

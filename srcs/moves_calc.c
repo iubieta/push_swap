@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_moves(t_list *head_A, t_list *head_B, int number)
 {
-	int a;
+	int	a;
 	int	b;
 	int	moves[4];
 	int	min_moves;
-	int i;
+	int	i;
 
 	a = number;
 	b = ft_find_place(head_B, a);
@@ -50,7 +50,7 @@ int	ft_moves_up(t_list *head, int number)
 		node = node->next;
 	}
 	if (node == NULL)
-		return(-1);
+		return (-1);
 	return (moves);
 }
 
@@ -67,6 +67,6 @@ int	ft_moves_down(t_list *head, int number)
 		node = node->next;
 	}
 	if (node == NULL)
-		return(-1);
+		return (-1);
 	return (ft_list_len(head) - moves);
 }

@@ -117,3 +117,13 @@ FUNCIONES
 	- ft_moves
 		- buscar numero a colocar en headB para que el de A qude en buena posicion (numero inmediatamente menor que nA o maxB)
 		- calcular movimientos para colocar los dos numeros en top (para cada sentido: rarb, rarrb, rrarb, rrarrb)
+
+	- print_moves
+		- copiar funciones de calculo movimientos combinados pero imprimiendo movimientos
+		- comprobar que combinacion es la necesaria
+		- aplicar esa funcion
+	
+	- ft_apply_moves
+		- copiar funciones de calculo movimientos combinados pero ejecutando movimientos 
+		- comprobar que combinacion es la necesaria
+		- aplicar esa funcion

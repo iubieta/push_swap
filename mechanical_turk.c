@@ -16,7 +16,7 @@ void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B)
 {
 	int	i;
 	int	fastest_number;
-	
+
 	ft_push_between(stack_A, stack_B);
 	ft_push_between(stack_A, stack_B);
 	i = 0;
@@ -31,8 +31,8 @@ void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B)
 	i = 0;
 	while (i < ft_list_len(*stack_B))
 	{
-		if  (ft_list_min(*stack_A) < (*stack_B)->content)
-			ft_push_between(stack_B,stack_A);
+		if (ft_list_min(*stack_A) < (*stack_B)->content)
+			ft_push_between(stack_B, stack_A);
 		else
 			ft_sort_three(stack_A);
 	}
@@ -46,7 +46,7 @@ int	ft_fastest_number(t_list *head_A, t_list *head_B)
 	int		fastest;
 	int		moves;
 	int		min_moves;
-	
+
 	node = head_A;
 	fastest = node->content;
 	min_moves = INT_MAX;
@@ -71,7 +71,7 @@ int	ft_find_place(t_list *head, int number)
 
 	node = head;
 	number_below = ft_list_min(head);
-	while(node != NULL)
+	while (node != NULL)
 	{
 		if (node->content < number && node->content > number_below)
 			number_below = node->content;
