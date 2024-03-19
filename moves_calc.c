@@ -14,25 +14,26 @@
 
 int	ft_moves(t_list *head_A, t_list *head_B, int number)
 {
-	//Trabajar con una copia de los stacks
-	int moves;
-	int	a_moves;
-	int b_moves;
-
-}
-
-int	ft_moves_to_top(t_list *head, int number)
-{
-	int moves_up;
-	int	moves_down;
+	int a;
+	int	b;
+	int	moves[4];
 	int	min_moves;
+	int i;
 
-	moves_up = ft_moves_up(head, number);
-	moves_down = ft_moves_down(head, number);
-	if (moves_up < moves_down)
-		min_moves = moves_up;
-	else
-		min_moves = moves_down;
+	a = number;
+	b = ft_find_place(head_B, a);
+	moves[0] = ft_aup_bup(head_A, head_B, a, b);
+	moves[1] = ft_adown_bdown(head_A, head_B, a, b);
+	moves[2] = ft_aup_bdown(head_A, head_B, a, b);
+	moves[3] = ft_adown_bdown(head_A, head_B, a, b);
+	min_moves = moves[0];
+	i = 0;
+	while (i < 4)
+	{
+		if (moves[i] < min_moves)
+			min_moves = moves[i];
+		i++;
+	}
 	return (min_moves);
 }
 
@@ -67,8 +68,5 @@ int	ft_moves_down(t_list *head, int number)
 	}
 	if (node == NULL)
 		return(-1);
-	return (ft_list_len - moves);
+	return (ft_list_len(head) - moves);
 }
-
-
-

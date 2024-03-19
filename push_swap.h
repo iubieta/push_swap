@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/03/17 13:13:29 by marvin           ###   ########.fr       */
+/*   Updated: 2024/03/19 20:41:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_print_list(t_list *head);
 void	ft_free_list(t_list **list);
 int		ft_exists_in_list(int number, t_list *head);
 void	ft_swap_head(t_list **list);
-void	ft_push_between_lists(t_list **origin, t_list **destiny);
+void	ft_push_between(t_list **origin, t_list **destiny);
 void	ft_rotate_up(t_list **list);
 void	ft_rotate_down(t_list **list);
 int		ft_list_len(t_list *head);
@@ -44,5 +44,15 @@ int		ft_list_min(t_list *head);
 int		ft_list_max(t_list *head);
 void	ft_sort_three(t_list **list);
 int		ft_sorted(t_list *head);
+void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B);
+int		ft_fastest_number(t_list *head_A, t_list *head_B);
+int		ft_find_place(t_list *head, int number);
+int		ft_moves(t_list *head_A, t_list *head_B, int number);
+int		ft_moves_up(t_list *head, int number);
+int		ft_moves_down(t_list *head, int number);
+int		ft_aup_bup(t_list *head_A, t_list *head_B, int a, int b);
+int		ft_adown_bdown(t_list *head_A, t_list *head_B, int a, int b);
+int		ft_aup_bdown(t_list *head_A, t_list *head_B, int a, int b);
+int		ft_adown_bup(t_list *head_A, t_list *head_B, int a, int b);
 
 #endif

@@ -28,7 +28,7 @@ void	ft_swap_head(t_list **list)
 }
 
 //pushea un nodo de una lista a otra 
-void	ft_push_between_lists(t_list **origin, t_list **destiny)
+void	ft_push_between(t_list **origin, t_list **destiny)
 {
 	t_list	*origin_head;
 	t_list	*del;
