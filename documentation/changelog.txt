@@ -171,5 +171,12 @@ MARTES 19/03:
 MIERCOLES 20/03:
 
 	Cambios:
-		- Empezado a escribir sort_number (faltan print_move y apply_move)
+		- Empezado a escribir sort_number
+		- Escritas print_move y apply_move
 		
+	CUIDADO!! Cambiar funcion para recoger argumentos --> el primer argumento debe quedar en la cabeza del stack
+
+	Seguir con:
+		- Revisar todo lo de sort pushNumber
+		- revisar el orden del stack inicial
+		- probar funciones

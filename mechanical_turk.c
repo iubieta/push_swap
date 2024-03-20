@@ -90,7 +90,7 @@ void	ft_sort_number(t_list **stack_A, t_list **stack_B, int number)
 }
 
 
-void	ft_get_move(t_list **stack_A, t_list **stack_B, int number)
+int	ft_get_move(t_list **stack_A, t_list **stack_B, int number)
 {
 	int	a;
 	int	b;
