@@ -167,3 +167,9 @@ MARTES 19/03:
 		- Probar bien ft_moves y/o subfunciones
 		- Pensar en como imprimir movimientos
 		- Hacer EXAMEN!!!
+
+MIERCOLES 20/03:
+
+	Cambios:
+		- Empezado a escribir sort_number (faltan print_move y apply_move)
+		

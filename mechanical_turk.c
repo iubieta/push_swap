@@ -23,7 +23,7 @@ void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B)
 	while (i < ft_list_len(*stack_A) - 3)
 	{
 		fastest_number = ft_fastest_number(*stack_A, *stack_B);
-		//ft_sort_number(stack_A, stack_B, fastest_number);
+		ft_sort_number(stack_A, stack_B, fastest_number);
 		i++;
 	}
 	ft_sort_three(stack_A);
@@ -80,7 +80,30 @@ int	ft_find_place(t_list *head, int number)
 	return (number_below);
 }
 
-/* void	ft_sort_number(t_list **stack_A, t_list **stack_B, int number)
+void	ft_sort_number(t_list **stack_A, t_list **stack_B, int number)
 {
+	int	move;
+	
+	move = ft_get_move(stack_A, stack_B, number);
+	ft_print_move(move, stack_A, stack_B, number);
+	ft_apply_move(move, stack_A, stack_B, number);
+}
 
-} */
+
+void	ft_get_move(t_list **stack_A, t_list **stack_B, int number)
+{
+	int	a;
+	int	b;
+	int	moves[4];
+	int	move;
+	int	i;
+
+	a = number;
+	b = ft_find_place(head_B, a);
+	moves[0] = ft_aup_bup(head_A, head_B, a, b);
+	moves[1] = ft_adown_bdown(head_A, head_B, a, b);
+	moves[2] = ft_aup_bdown(head_A, head_B, a, b);
+	moves[3] = ft_adown_bdown(head_A, head_B, a, b);
+	move = ft_min_index(moves);
+	return (move);
+}

@@ -40,3 +40,21 @@ long	ft_atol(const char *s)
 	i++;
 	return (number * sign);
 }
+
+int	ft_min_index(void *array)
+{
+	int	i;
+	int min;
+	int	index;
+	
+	i = 0;
+	min = int_array[0];
+	index = 0;
+	while (i < 4)
+	{
+		if (min > int_array[i])
+			index = i;
+		i++;
+	}
+	return (index);
+}
