@@ -177,6 +177,18 @@ MIERCOLES 20/03:
 	CUIDADO!! Cambiar funcion para recoger argumentos --> el primer argumento debe quedar en la cabeza del stack
 
 	Seguir con:
-		- Revisar todo lo de sort pushNumber
+		- Revisar todo lo de sort_number
 		- revisar el orden del stack inicial
 		- probar funciones
+
+SABADO 23/03:
+	
+	Cambios:
+		- cabeceras de varias funciones
+		- terminado apply_move
+		- creado y prbado tester para sort_number
+		- cambiada funcion find_place para poder usarla en ambos sentidos (con variable order)
+		- cambiado ft_sort, ahora calcula los dos numero a colocar en top y los pasa al resto de funcione
+
+	Seguir con:
+		- Comprobar finf_place (no funciona correctamente)

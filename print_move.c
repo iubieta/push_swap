@@ -12,13 +12,8 @@
 
 #include "push_swap.h"
 
-void	ft_print_move(int move, t_list *head_A, t_list *head_B, int number)
+void	ft_print_move(int move, t_list *head_A, t_list *head_B, int a, int b)
 {
-	int	a;
-	int b;
-
-	a = number;
-	b = ft_find_place(head_B, a);
 	if (move == 0)
 		ft_print_upup(head_A, head_B, a, b);
 	if (move == 1)
@@ -43,14 +38,14 @@ void	ft_print_upup(t_list *head_A, t_list *head_B, int a, int b)
 		while (i++ < b_moves)
 			ft_printf("rr\n");
 		while (i++ < a_moves);
-			ft_printf("rra\n");
+			ft_printf("ra\n");
 	}
 	else
 	{
 		while (i++ < a_moves)
 			ft_printf("rr\n");
 		while (i++ < b_moves);
-			ft_printf("rrb\n");
+			ft_printf("rb\n");
 	}
 }
 
@@ -68,14 +63,14 @@ void	ft_print_downdown(t_list *head_A, t_list *head_B, int a, int b)
 		while (i++ < b_moves)
 			ft_printf("rrr\n");
 		while (i++ < a_moves);
-			ft_printf("ra\n");
+			ft_printf("rra\n");
 	}
 	else
 	{
 		while (i++ < a_moves)
 			ft_printf("rrr\n");
 		while (i++ < b_moves);
-			ft_printf("rb\n");
+			ft_printf("rrb\n");
 	}
 }
 

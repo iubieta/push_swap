@@ -21,7 +21,7 @@ int	ft_moves(t_list *head_A, t_list *head_B, int number)
 	int	i;
 
 	a = number;
-	b = ft_find_place(head_B, a);
+	b = ft_find_place(head_B, a, 'b');
 	moves[0] = ft_aup_bup(head_A, head_B, a, b);
 	moves[1] = ft_adown_bdown(head_A, head_B, a, b);
 	moves[2] = ft_aup_bdown(head_A, head_B, a, b);

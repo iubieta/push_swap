@@ -58,6 +58,12 @@ void	ft_rotate_up(t_list **list)
 	head->next = NULL;
 }
 
+void	ft_rotate_both_up(t_list **list_A, t_list **list_B)
+{
+	ft_rotate_up(list_A);
+	ft_rotate_up(list_B);
+}
+
 //rota la lista hacia abajo
 void	ft_rotate_down(t_list **list)
 {
@@ -76,4 +82,10 @@ void	ft_rotate_down(t_list **list)
 	prev->next = NULL;
 	last->next = *list;
 	*list = last;
+}
+
+void	ft_rotate_both_down(t_list **list_A, t_list **list_B)
+{
+	ft_rotate_down(list_A);
+	ft_rotate_down(list_B);
 }
