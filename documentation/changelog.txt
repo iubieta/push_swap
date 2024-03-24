@@ -200,6 +200,7 @@ DOMINGO 24/03:
 		- Corregidas funciones de apply_move y print_move
 		- Ajuste de i despues del primer bucle y eliminado bug de ";"
 		- sort_b aparentemente funcionando
+		- movidas funciones fastest_number, find_place, check_place y get_move a archivo sort_b 
 	
 	Seguir con: 
 		- Comprobacion del resto de mechanical_turk
