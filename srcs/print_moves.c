@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   apply_moves.c                                      :+:      :+:    :+:   */
+/*   print_moves.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,96 +10,102 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-//Recibe que combinacion de movimientos a realizar y la ejecuta sabiendo para que numero es
-void	ft_apply_move(int move, t_list **stack_A, t_list **stack_B, int a, int b)
+void	ft_print_move(int move, t_list *head_A, t_list *head_B, int a, int b)
 {
 	if (move == 0)
-		ft_apply_upup(stack_A, stack_B, a, b);
+		ft_print_upup(head_A, head_B, a, b);
 	if (move == 1)
-		ft_apply_downdown(stack_A, stack_B, a, b);
+		ft_print_downdown(head_A, head_B, a, b);
 	if (move == 2)
-		ft_apply_updown(stack_A, stack_B, a, b);
+		ft_print_updown(head_A, head_B, a, b);
 	if (move == 3)
-		ft_apply_downup(stack_A, stack_B, a, b);
+		ft_print_downup(head_A, head_B, a, b);
 }
 
-//
-void	ft_apply_upup(t_list **stack_A, t_list **stack_B, int a, int b)
+void	ft_print_upup(t_list *head_A, t_list *head_B, int a, int b)
 {
 	int i;
 	int	a_moves;
 	int	b_moves;
 
 	i = 0;
-	a_moves = ft_moves_up(*stack_A, a);
-	b_moves = ft_moves_up(*stack_B, b);
+	a_moves = ft_moves_up(head_A, a);
+	b_moves = ft_moves_up(head_B, b);
+	printf("a_moves: %i\n",a_moves);
+	printf("b_moves: %i\n",b_moves);
 	if (a_moves >= b_moves)
 	{
 		while (i++ < b_moves)
-			ft_rotate_both_up(stack_A, stack_B);
+			ft_printf("rr\n");
 		while (i++ < a_moves + 1)
-			ft_rotate_up(stack_A);
+			ft_printf("ra\n");
 	}
 	else
 	{
 		while (i++ < a_moves)
-			ft_rotate_both_up(stack_A, stack_B);
-		while (i++ < b_moves + 1)
-			ft_rotate_up(stack_B);
-	}
-}
-
-void	ft_apply_downdown(t_list **stack_A, t_list **stack_B, int a, int b)
-{
-	int i;
-	int	a_moves;
-	int	b_moves;
-
-	i = 0;
-	a_moves = ft_moves_down(*stack_A, a);
-	b_moves = ft_moves_down(*stack_B, b);
-	if (a_moves >= b_moves)
-	{
-		while (i++ < b_moves)
-			ft_rotate_both_down(stack_A, stack_B);
-		while (i++ < a_moves + 1)
-			ft_rotate_down(stack_A);
-	}
-	else
-	{
-		while (i++ < a_moves)
-			ft_rotate_both_down(stack_A, stack_B);
+			ft_printf("rr\n");
 		while (i++ < b_moves + 1)
 			ft_printf("rb\n");
 	}
 }
 
-void	ft_apply_updown(t_list **stack_A, t_list **stack_B, int a, int b)
+void	ft_print_downdown(t_list *head_A, t_list *head_B, int a, int b)
 {
-	int	i;
-	int	moves;
+	int i;
+	int	a_moves;
+	int	b_moves;
 
 	i = 0;
-	moves = ft_moves_up(*stack_A, a);
-	while (i++ < moves)
-		ft_rotate_up(stack_A);
-	moves += ft_moves_down(*stack_B, b);
-	while (i++ < moves + 1)
-		ft_rotate_down(stack_B);
+	a_moves = ft_moves_down(head_A, a);
+	b_moves = ft_moves_down(head_B, b);
+	printf("a_moves: %i\n",a_moves);
+	printf("b_moves: %i\n",b_moves);
+	if (a_moves >= b_moves)
+	{
+		while (i++ < b_moves)
+			ft_printf("rrr\n");
+		while (i++ < a_moves + 1)
+			ft_printf("rra\n");
+	}
+	else
+	{
+		while (i++ < a_moves)
+			ft_printf("rrr\n");
+		while (i++ < b_moves + 1)
+			ft_printf("rrb\n");
+	}
 }
 
-void	ft_apply_downup(t_list **stack_A, t_list **stack_B, int a, int b)
+void	ft_print_updown(t_list *head_A, t_list *head_B, int a, int b)
 {
 	int	i;
 	int	moves;
 
 	i = 0;
-	moves = ft_moves_down(*stack_A, a);
+	moves = ft_moves_up(head_A, a);
+	printf("a_moves: %i\n",moves);
 	while (i++ < moves)
-		ft_rotate_down(stack_A);
-	moves += ft_moves_up(*stack_B, b);
+		ft_printf("ra\n");
+	moves += ft_moves_down(head_B, b);
+	printf("b_moves: %i\n",moves);
 	while (i++ < moves + 1)
-		ft_rotate_up(stack_B);
+		ft_printf("rrb\n");
+}
+
+void	ft_print_downup(t_list *head_A, t_list *head_B, int a, int b)
+{
+	int	i;
+	int	moves;
+
+	i = 0;
+	moves = ft_moves_down(head_A, a);
+	printf("a_moves: %i\n",moves);
+	while (i++ < moves)
+		ft_printf("rra\n");
+	moves += ft_moves_up(head_B, b);
+	printf("b_moves: %i\n",moves);
+	while (i++ < moves + 1)
+		ft_printf("rb\n");
 }
