@@ -8,9 +8,6 @@ void	main(int argc, char **argv)
 	t_list	*head_B;
 	
 	int		i;
-	int		a;
-	int		b;
-	int		move;
 	int		len;
 	int		fastest;
 
@@ -39,26 +36,16 @@ void	main(int argc, char **argv)
 		printf("------------------\n");
 		printf("Fastest number: %i\n",fastest);
 		
-		a = fastest;
-		b = ft_find_place(*stack_B, a, 'd');
-		printf("Place: %i\n", b);
-		
-		move = ft_get_move(*stack_A, *stack_B, a, b);
-		printf("------------------\n");
-		printf("Move: %i\n",move);
-		
-		ft_print_move(move, *stack_A, *stack_B, a, b);
-
-		ft_apply_move(move, stack_A, stack_B, a, b);
+		ft_sort_number(stack_A, stack_B, fastest, 'd');
 		printf("------------------\n");
 		printf("Stack A:\n");
 		ft_print_list(head_A);
 		printf("Stack B:\n");
 		ft_print_list(head_B);
+		printf("------------------\n");
 		
 		ft_push_between(stack_A, stack_B);
-		printf("------------------\n");
-		printf("Push\n");
+		printf("PUSH\n");
 		printf("------------------\n");
 		printf("Stack A:\n");
 		ft_print_list(head_A);
@@ -66,4 +53,5 @@ void	main(int argc, char **argv)
 		ft_print_list(head_B);
 		i++;
 	}
+	return;
 }

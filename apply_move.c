@@ -35,18 +35,18 @@ void	ft_apply_upup(t_list **stack_A, t_list **stack_B, int a, int b)
 	i = 0;
 	a_moves = ft_moves_up(*stack_A, a);
 	b_moves = ft_moves_up(*stack_B, b);
-	if (a_moves > b_moves)
+	if (a_moves >= b_moves)
 	{
 		while (i++ < b_moves)
 			ft_rotate_both_up(stack_A, stack_B);
-		while (i++ < a_moves);
+		while (i++ < a_moves + 1)
 			ft_rotate_up(stack_A);
 	}
 	else
 	{
 		while (i++ < a_moves)
 			ft_rotate_both_up(stack_A, stack_B);
-		while (i++ < b_moves);
+		while (i++ < b_moves + 1)
 			ft_rotate_up(stack_B);
 	}
 }
@@ -60,18 +60,18 @@ void	ft_apply_downdown(t_list **stack_A, t_list **stack_B, int a, int b)
 	i = 0;
 	a_moves = ft_moves_down(*stack_A, a);
 	b_moves = ft_moves_down(*stack_B, b);
-	if (a_moves > b_moves)
+	if (a_moves >= b_moves)
 	{
 		while (i++ < b_moves)
 			ft_rotate_both_down(stack_A, stack_B);
-		while (i++ < a_moves);
+		while (i++ < a_moves + 1)
 			ft_rotate_down(stack_A);
 	}
 	else
 	{
 		while (i++ < a_moves)
 			ft_rotate_both_down(stack_A, stack_B);
-		while (i++ < b_moves);
+		while (i++ < b_moves + 1)
 			ft_printf("rb\n");
 	}
 }
@@ -84,10 +84,10 @@ void	ft_apply_updown(t_list **stack_A, t_list **stack_B, int a, int b)
 	i = 0;
 	moves = ft_moves_up(*stack_A, a);
 	while (i++ < moves)
-		ft_printf("ra\n");
+		ft_rotate_up(stack_A);
 	moves += ft_moves_down(*stack_B, b);
-	while (i++ < moves)
-		ft_printf("rrb\n");
+	while (i++ < moves + 1)
+		ft_rotate_down(stack_B);
 }
 
 void	ft_apply_downup(t_list **stack_A, t_list **stack_B, int a, int b)
@@ -98,8 +98,8 @@ void	ft_apply_downup(t_list **stack_A, t_list **stack_B, int a, int b)
 	i = 0;
 	moves = ft_moves_down(*stack_A, a);
 	while (i++ < moves)
-		ft_printf("rra\n");
+		ft_rotate_down(stack_A);
 	moves += ft_moves_up(*stack_B, b);
-	while (i++ < moves)
-		ft_printf("rb\n");
+	while (i++ < moves + 1)
+		ft_rotate_up(stack_B);
 }

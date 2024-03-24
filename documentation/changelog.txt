@@ -192,3 +192,14 @@ SABADO 23/03:
 
 	Seguir con:
 		- Comprobar finf_place (no funciona correctamente)
+
+DOMINGO 24/03:
+
+	Cambios:
+		- Comprobada y corregida la funcion find_place
+		- Corregidas funciones de apply_move y print_move
+		- Ajuste de i despues del primer bucle y eliminado bug de ";"
+		- sort_b aparentemente funcionando
+	
+	Seguir con: 
+		- Comprobacion del resto de mechanical_turk

@@ -12,6 +12,7 @@
 
 #include "../push_swap.h"
 
+//Calcula el numero de movimientos necesarios para pasar un numero a B en la posicion correcta
 int	ft_moves(t_list *head_A, t_list *head_B, int number)
 {
 	int	a;
@@ -21,7 +22,7 @@ int	ft_moves(t_list *head_A, t_list *head_B, int number)
 	int	i;
 
 	a = number;
-	b = ft_find_place(head_B, a, 'b');
+	b = ft_find_place(head_B, a, 'd');
 	moves[0] = ft_aup_bup(head_A, head_B, a, b);
 	moves[1] = ft_adown_bdown(head_A, head_B, a, b);
 	moves[2] = ft_aup_bdown(head_A, head_B, a, b);
@@ -37,6 +38,7 @@ int	ft_moves(t_list *head_A, t_list *head_B, int number)
 	return (min_moves);
 }
 
+//Calcula el n de rotaciones hacia arriba para colocar un numero en top
 int	ft_moves_up(t_list *head, int number)
 {
 	t_list	*node;
@@ -54,6 +56,7 @@ int	ft_moves_up(t_list *head, int number)
 	return (moves);
 }
 
+//Calcula el n de rotaciones hacia abajo para colocar un numero en top
 int	ft_moves_down(t_list *head, int number)
 {
 	t_list	*node;

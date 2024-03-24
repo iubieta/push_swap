@@ -18,13 +18,9 @@ void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B)
 	int len;
 	int	fastest_number;
 
+	//INIT B
 	ft_push_between(stack_A, stack_B);
 	ft_push_between(stack_A, stack_B);
-	printf("Stack A:\n");
-	ft_print_list(*stack_A);
-	printf("Stack B:\n");
-	ft_print_list(*stack_B);
-	printf("------------\n");
 	
 	//SORT B
 	i = 0;
@@ -32,38 +28,17 @@ void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B)
 	while (i < len - 3)
 	{
 		fastest_number = ft_fastest_number(*stack_A, *stack_B);
-		ft_sort_number(stack_A, stack_B, fastest_number, 'b');
+		ft_sort_number(stack_A, stack_B, fastest_number, 'd');
 		ft_push_between(stack_A, stack_B);
 		ft_printf("pb\n");
 		i++;
 	}
-	printf("Sort B:\n");
-	printf("------------\n");
-	printf("Stack A:\n");
-	ft_print_list(*stack_A);
-	printf("Stack B:\n");
-	ft_print_list(*stack_B);
-	printf("------------\n");
 	
 	//SORT THREE
 	ft_sort_three(stack_A);
-	printf("Sort three:\n");
-	printf("------------\n");
-	printf("Stack A:\n");
-	ft_print_list(*stack_A);
-	printf("Stack B:\n");
-	ft_print_list(*stack_B);
-	printf("------------\n");
 	
 	//HIGHEST AT TOP
 	ft_rotate_down(stack_A);
-	printf("Highest at top:\n");
-	printf("------------\n");
-	printf("Stack A:\n");
-	ft_print_list(*stack_A);
-	printf("Stack B:\n");
-	ft_print_list(*stack_B);
-	printf("------------\n");
 	
 	//PUSH B
 	i = 0;
@@ -74,13 +49,6 @@ void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B)
 		ft_push_between(stack_B, stack_A);
 		ft_printf("pa\n");
 	}
-	printf("Sort A:\n");
-	printf("------------\n");
-	printf("Stack A:\n");
-	ft_print_list(*stack_A);
-	printf("Stack B:\n");
-	ft_print_list(*stack_B);
-	printf("------------\n");
 }
 
 //Busca el numero dentro de A que requiere menos movimientos 
@@ -119,7 +87,6 @@ void	ft_sort_number(t_list **stack_A, t_list **stack_B, int number, char order)
 	int b;
 	int	move;
 	
-	//printf("ft_sort_number\n");
 	a = number;
 	b = ft_find_place(*stack_B, a, order);
 	move = ft_get_move(*stack_A, *stack_B, a, b);
@@ -134,22 +101,43 @@ int	ft_find_place(t_list *head, int number, char order)
 {
 	t_list	*node;
 	int		number_below;
-	
-	//printf("ft_find_place\n");
+
+	number_below = ft_check_place(head, number, order);
 	node = head;
-	if (order == 'a')
-		number_below = ft_list_max(head);
-	else if (order == 'b')
-		number_below = ft_list_min(head);
 	while (node != NULL)
 	{	
 		if (order == 'a' && node->content > number && node->content < number_below)
 			number_below = node->content;
-		else if (order == 'b' && node->content < number && node->content > number_below)
+		else if (order == 'd' && node->content < number && node->content > number_below)
 			number_below = node->content;
 		node = node->next;
 	}
 	return (number_below);
+}
+
+//Comprueba si el numero a pushear seria un maximo o un minimo
+//En esos casos el numero en la cabeza de B deberia ser el limite contrario
+int	ft_check_place(t_list *head, int number, char order)
+{
+	int		max;
+	int 	min;
+
+	max = ft_list_max(head);
+	min = ft_list_min(head);
+	if (order == 'a')
+	{
+		if (max < number)
+			return (min);
+		else
+			return (max);
+	}
+	else if (order == 'd')
+	{
+		if (min > number)
+			return (max);
+		else
+			return (min);
+	}
 }
 
 //Busca la combinacion de movimientos idonea para pasar un numero concreto de A a B
@@ -159,7 +147,6 @@ int	ft_get_move(t_list *head_A, t_list *head_B, int a, int b)
 	int	move;
 	int	i;
 
-	//printf("ft_get_move\n");
 	moves[0] = ft_aup_bup(head_A, head_B, a, b);
 	moves[1] = ft_adown_bdown(head_A, head_B, a, b);
 	moves[2] = ft_aup_bdown(head_A, head_B, a, b);

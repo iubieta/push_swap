@@ -33,18 +33,20 @@ void	ft_print_upup(t_list *head_A, t_list *head_B, int a, int b)
 	i = 0;
 	a_moves = ft_moves_up(head_A, a);
 	b_moves = ft_moves_up(head_B, b);
-	if (a_moves > b_moves)
+	printf("a_moves: %i\n",a_moves);
+	printf("b_moves: %i\n",b_moves);
+	if (a_moves >= b_moves)
 	{
 		while (i++ < b_moves)
 			ft_printf("rr\n");
-		while (i++ < a_moves);
+		while (i++ < a_moves + 1)
 			ft_printf("ra\n");
 	}
 	else
 	{
 		while (i++ < a_moves)
 			ft_printf("rr\n");
-		while (i++ < b_moves);
+		while (i++ < b_moves + 1)
 			ft_printf("rb\n");
 	}
 }
@@ -58,18 +60,20 @@ void	ft_print_downdown(t_list *head_A, t_list *head_B, int a, int b)
 	i = 0;
 	a_moves = ft_moves_down(head_A, a);
 	b_moves = ft_moves_down(head_B, b);
-	if (a_moves > b_moves)
+	printf("a_moves: %i\n",a_moves);
+	printf("b_moves: %i\n",b_moves);
+	if (a_moves >= b_moves)
 	{
 		while (i++ < b_moves)
 			ft_printf("rrr\n");
-		while (i++ < a_moves);
+		while (i++ < a_moves + 1)
 			ft_printf("rra\n");
 	}
 	else
 	{
 		while (i++ < a_moves)
 			ft_printf("rrr\n");
-		while (i++ < b_moves);
+		while (i++ < b_moves + 1)
 			ft_printf("rrb\n");
 	}
 }
@@ -81,10 +85,12 @@ void	ft_print_updown(t_list *head_A, t_list *head_B, int a, int b)
 
 	i = 0;
 	moves = ft_moves_up(head_A, a);
+	printf("a_moves: %i\n",moves);
 	while (i++ < moves)
 		ft_printf("ra\n");
 	moves += ft_moves_down(head_B, b);
-	while (i++ < moves)
+	printf("b_moves: %i\n",moves);
+	while (i++ < moves + 1)
 		ft_printf("rrb\n");
 }
 
@@ -95,9 +101,11 @@ void	ft_print_downup(t_list *head_A, t_list *head_B, int a, int b)
 
 	i = 0;
 	moves = ft_moves_down(head_A, a);
+	printf("a_moves: %i\n",moves);
 	while (i++ < moves)
 		ft_printf("rra\n");
 	moves += ft_moves_up(head_B, b);
-	while (i++ < moves)
+	printf("b_moves: %i\n",moves);
+	while (i++ < moves + 1)
 		ft_printf("rb\n");
 }
