@@ -216,3 +216,5 @@ LUNES 25/03:
 	Seguir con:
 		- comprobar paso final de mechanical_turk
 		- Probar a cambiar lst_add_front por add_back para no pasar a b y luego a A
+
+HITO: Mechanical turk aparentemente funcionando
