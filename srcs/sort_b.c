@@ -10,7 +10,6 @@ int	ft_fastest_number(t_list *head_A, t_list *head_B)
 	int		moves;
 	int		min_moves;
 
-	//printf("ft_fastest_number\n");
 	node = head_A;
 	fastest = node->content;
 	min_moves = INT_MAX;

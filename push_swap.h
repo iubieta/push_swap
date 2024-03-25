@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/03/24 10:23:14 by marvin           ###   ########.fr       */
+/*   Updated: 2024/03/25 20:42:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ft_check_element(char *element);
 
 long	ft_atol(const char *s);
 int		ft_min_index(int *array);
-
+//int		*ft_list_to_int_array(t_list *head);
 
 t_list	*ft_lst_new_node(int content);
 void	ft_lst_add_front(t_list **list, t_list *node);
@@ -55,6 +55,10 @@ void	ft_sort_three(t_list **list);
 int		ft_sorted(t_list *head);
 
 void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B);
+void	ft_highest_at_top(t_list **list);
+void	ft_push_b(t_list **stack_A, t_list **stack_B);
+void	ft_sort_b(t_list **stack_A, t_list **stack_B);
+
 int		ft_fastest_number(t_list *head_A, t_list *head_B);
 void	ft_sort_number(t_list **stack_A, t_list **stack_B, int number, char order);
 int		ft_find_place(t_list *head, int number, char order);

@@ -12,6 +12,8 @@
 
 #include "../push_swap.h"
 
+//Imprime la combinacion de movimientos indicada 
+//hasta que ambos numeros queden en la cabeza de sus respectivas listas
 void	ft_print_move(int move, t_list *head_A, t_list *head_B, int a, int b)
 {
 	if (move == 0)
@@ -33,8 +35,6 @@ void	ft_print_upup(t_list *head_A, t_list *head_B, int a, int b)
 	i = 0;
 	a_moves = ft_moves_up(head_A, a);
 	b_moves = ft_moves_up(head_B, b);
-	printf("a_moves: %i\n",a_moves);
-	printf("b_moves: %i\n",b_moves);
 	if (a_moves >= b_moves)
 	{
 		while (i++ < b_moves)
@@ -60,8 +60,6 @@ void	ft_print_downdown(t_list *head_A, t_list *head_B, int a, int b)
 	i = 0;
 	a_moves = ft_moves_down(head_A, a);
 	b_moves = ft_moves_down(head_B, b);
-	printf("a_moves: %i\n",a_moves);
-	printf("b_moves: %i\n",b_moves);
 	if (a_moves >= b_moves)
 	{
 		while (i++ < b_moves)
@@ -85,11 +83,9 @@ void	ft_print_updown(t_list *head_A, t_list *head_B, int a, int b)
 
 	i = 0;
 	moves = ft_moves_up(head_A, a);
-	printf("a_moves: %i\n",moves);
 	while (i++ < moves)
 		ft_printf("ra\n");
 	moves += ft_moves_down(head_B, b);
-	printf("b_moves: %i\n",moves);
 	while (i++ < moves + 1)
 		ft_printf("rrb\n");
 }
@@ -101,11 +97,9 @@ void	ft_print_downup(t_list *head_A, t_list *head_B, int a, int b)
 
 	i = 0;
 	moves = ft_moves_down(head_A, a);
-	printf("a_moves: %i\n",moves);
 	while (i++ < moves)
 		ft_printf("rra\n");
 	moves += ft_moves_up(head_B, b);
-	printf("b_moves: %i\n",moves);
 	while (i++ < moves + 1)
 		ft_printf("rb\n");
 }

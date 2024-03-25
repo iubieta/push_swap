@@ -41,6 +41,7 @@ long	ft_atol(const char *s)
 	return (number * sign);
 }
 
+//Busca la posicion de el menor dentro de un array
 int	ft_min_index(int *array)
 {
 	int	i;
@@ -58,3 +59,25 @@ int	ft_min_index(int *array)
 	}
 	return (index);
 }
+
+//Pasa una lista de enteros a un array de enteros
+/* int	*ft_list_to_int_array(t_list *head)
+{
+	t_list	*node;
+	int		i;
+	int		*array;
+
+	if (head == NULL)
+		return(NULL);
+	array = malloc(sizeof(int) * ft_list_len(head));
+	if (array == NULL)
+		return (NULL);
+	i = 0;
+	node = head;
+	while (node != NULL)
+	{
+		array[i++] = node->content;
+		node = node->next;
+	}
+	return (array);
+} */

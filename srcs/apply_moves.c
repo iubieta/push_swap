@@ -12,7 +12,8 @@
 
 #include "../push_swap.h"
 
-//Recibe que combinacion de movimientos a realizar y la ejecuta sabiendo para que numero es
+//Ejecuta la combinacion de movimientos indicada 
+//hasta que ambos numeros queden en la cabeza de sus respectivas listas
 void	ft_apply_move(int move, t_list **stack_A, t_list **stack_B, int a, int b)
 {
 	if (move == 0)

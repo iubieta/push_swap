@@ -204,3 +204,15 @@ DOMINGO 24/03:
 	
 	Seguir con: 
 		- Comprobacion del resto de mechanical_turk
+
+LUNES 25/03:
+
+	Cambios:
+		- mechanical_turk separada en funciones (creadas algunas funciones utilitarias)
+		- comprobado el funcionamiento
+		- cambiados printf-s por ft_printfs
+		- comentadas todas las funciones
+
+	Seguir con:
+		- comprobar paso final de mechanical_turk
+		- Probar a cambiar lst_add_front por add_back para no pasar a b y luego a A

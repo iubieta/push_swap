@@ -12,6 +12,8 @@
 
 #include "../push_swap.h"
 
+//Estas funciones calculan el numero de movimientos necesarios por cada combinacion
+//para colocar los stacks en posiciones correctas para ser pusheados
 int	ft_aup_bup(t_list *head_A, t_list *head_B, int a, int b)
 {
 	int	a_moves;
