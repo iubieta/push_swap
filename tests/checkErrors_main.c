@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	if (stackA)
 	{
 		printf("StackA:\n");
-		ft_prt_list(headA);
+		ft_print_list(headA);
 	}
 	else
 		printf("STACK_A LIBERADO\n");
