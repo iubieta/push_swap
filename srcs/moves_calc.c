@@ -12,7 +12,8 @@
 
 #include "../push_swap.h"
 
-//Calcula el numero de movimientos necesarios para pasar un numero a B en la posicion correcta
+//Calcula el numero de movimientos necesarios para
+//pasar un numero a B en la posicion correcta
 int	ft_moves(t_list *head_A, t_list *head_B, int number)
 {
 	int	a;

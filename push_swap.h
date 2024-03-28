@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/03/25 20:42:49 by marvin           ###   ########.fr       */
+/*   Updated: 2024/03/28 17:03:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define PUSH_SWAP_H
 
 # include <stdio.h>
+# include <unistd.h>
 # include <limits.h>
-# include "./srcs/libft/libft.h"
+# include "srcs/libft/libft.h"
 # include "./srcs/printf/ft_printf.h"
 
 typedef struct s_list
@@ -60,7 +61,7 @@ void	ft_push_b(t_list **stack_A, t_list **stack_B);
 void	ft_sort_b(t_list **stack_A, t_list **stack_B);
 
 int		ft_fastest_number(t_list *head_A, t_list *head_B);
-void	ft_sort_number(t_list **stack_A, t_list **stack_B, int number, char order);
+void	ft_sort_num(t_list **stack_A, t_list **stack_B, int number, char order);
 int		ft_find_place(t_list *head, int number, char order);
 int		ft_check_place(t_list *head, int number, char order);
 int		ft_get_move(t_list *head_A, t_list *head_B, int a, int b);
@@ -74,13 +75,13 @@ int		ft_adown_bdown(t_list *head_A, t_list *head_B, int a, int b);
 int		ft_aup_bdown(t_list *head_A, t_list *head_B, int a, int b);
 int		ft_adown_bup(t_list *head_A, t_list *head_B, int a, int b);
 
-void	ft_print_move(int move, t_list *head_A, t_list *head_B, int a, int b);
+void	ft_print_move(t_list *head_A, t_list *head_B, int a, int b);
 void	ft_print_upup(t_list *head_A, t_list *head_B, int a, int b);
 void	ft_print_downdown(t_list *head_A, t_list *head_B, int a, int b);
 void	ft_print_updown(t_list *head_A, t_list *head_B, int a, int b);
 void	ft_print_downup(t_list *head_A, t_list *head_B, int a, int b);
 
-void	ft_apply_move(int move, t_list **stack_A, t_list **stack_B, int a, int b);
+void	ft_apply_move(t_list **stack_A, t_list **stack_B, int a, int b);
 void	ft_apply_upup(t_list **stack_A, t_list **stack_B, int a, int b);
 void	ft_apply_downdown(t_list **stack_A, t_list **stack_B, int a, int b);
 void	ft_apply_updown(t_list **stack_A, t_list **stack_B, int a, int b);

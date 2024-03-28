@@ -14,8 +14,11 @@
 
 //Ejecuta la combinacion de movimientos indicada 
 //hasta que ambos numeros queden en la cabeza de sus respectivas listas
-void	ft_apply_move(int move, t_list **stack_A, t_list **stack_B, int a, int b)
+void	ft_apply_move(t_list **stack_A, t_list **stack_B, int a, int b)
 {
+	int	move;
+
+	move = ft_get_move(*stack_A, *stack_B, a, b);
 	if (move == 0)
 		ft_apply_upup(stack_A, stack_B, a, b);
 	if (move == 1)
@@ -29,7 +32,7 @@ void	ft_apply_move(int move, t_list **stack_A, t_list **stack_B, int a, int b)
 //
 void	ft_apply_upup(t_list **stack_A, t_list **stack_B, int a, int b)
 {
-	int i;
+	int	i;
 	int	a_moves;
 	int	b_moves;
 
@@ -54,7 +57,7 @@ void	ft_apply_upup(t_list **stack_A, t_list **stack_B, int a, int b)
 
 void	ft_apply_downdown(t_list **stack_A, t_list **stack_B, int a, int b)
 {
-	int i;
+	int	i;
 	int	a_moves;
 	int	b_moves;
 

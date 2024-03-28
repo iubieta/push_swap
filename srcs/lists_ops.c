@@ -27,20 +27,6 @@ void	ft_swap_head(t_list **list)
 	*list = next;
 }
 
-//pushea un nodo de una lista a otra 
-void	ft_push_between(t_list **origin, t_list **destiny)
-{
-	t_list	*origin_head;
-	t_list	*del;
-
-	if (*origin == NULL )
-		return ;
-	origin_head = *origin;
-	*origin = origin_head->next;
-	origin_head->next = *destiny;
-	*destiny = origin_head;
-}
-
 //rota la lista hacia arriba
 void	ft_rotate_up(t_list **list)
 {

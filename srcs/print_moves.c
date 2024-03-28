@@ -14,8 +14,11 @@
 
 //Imprime la combinacion de movimientos indicada 
 //hasta que ambos numeros queden en la cabeza de sus respectivas listas
-void	ft_print_move(int move, t_list *head_A, t_list *head_B, int a, int b)
+void	ft_print_move(t_list *head_A, t_list *head_B, int a, int b)
 {
+	int	move;
+
+	move = ft_get_move(head_A, head_B, a, b);
 	if (move == 0)
 		ft_print_upup(head_A, head_B, a, b);
 	if (move == 1)
@@ -28,7 +31,7 @@ void	ft_print_move(int move, t_list *head_A, t_list *head_B, int a, int b)
 
 void	ft_print_upup(t_list *head_A, t_list *head_B, int a, int b)
 {
-	int i;
+	int	i;
 	int	a_moves;
 	int	b_moves;
 
@@ -53,7 +56,7 @@ void	ft_print_upup(t_list *head_A, t_list *head_B, int a, int b)
 
 void	ft_print_downdown(t_list *head_A, t_list *head_B, int a, int b)
 {
-	int i;
+	int	i;
 	int	a_moves;
 	int	b_moves;
 

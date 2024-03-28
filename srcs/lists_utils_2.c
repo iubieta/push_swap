@@ -12,6 +12,20 @@
 
 #include "../push_swap.h"
 
+//pushea un nodo de una lista a otra 
+void	ft_push_between(t_list **origin, t_list **destiny)
+{
+	t_list	*origin_head;
+	t_list	*del;
+
+	if (*origin == NULL )
+		return ;
+	origin_head = *origin;
+	*origin = origin_head->next;
+	origin_head->next = *destiny;
+	*destiny = origin_head;
+}
+
 //Calcula la longitud de la lista
 int	ft_list_len(t_list *head)
 {

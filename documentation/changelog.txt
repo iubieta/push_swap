@@ -218,3 +218,15 @@ LUNES 25/03:
 		- Probar a cambiar lst_add_front por add_back para no pasar a b y luego a A
 
 HITO: Mechanical turk aparentemente funcionando
+
+JUEVES 28/03:
+
+	Cambios:
+		- Cambiado error_handling para que imprima los errores por la salida esandar de errores
+		- Movido get_move dentro de apply_move y print_move para quitar un argumento
+		- Corregidos errores de norminette
+
+	Seguir con:
+		- Volver a comprobar mechanical_turk (push b)
+		- Terminar parte final de mechanical_turk
+		- Pasar tester

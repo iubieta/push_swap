@@ -64,15 +64,15 @@ void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B)
 void	ft_sort_b(t_list **stack_A, t_list **stack_B)
 {
 	int	i;
-	int len;
+	int	len;
 	int	fastest_number;
-	
+
 	i = 0;
 	len = ft_list_len(*stack_A);
 	while (i < len - 3)
 	{
 		fastest_number = ft_fastest_number(*stack_A, *stack_B);
-		ft_sort_number(stack_A, stack_B, fastest_number, 'd');
+		ft_sort_num(stack_A, stack_B, fastest_number, 'd');
 		ft_push_between(stack_A, stack_B);
 		ft_printf("pb\n");
 		i++;
@@ -101,7 +101,7 @@ void	ft_highest_at_top(t_list **list)
 		{
 			ft_rotate_down(list);
 			ft_printf("rrb\n");
-		}	
+		}
 	}
 }
 
@@ -111,15 +111,16 @@ void	ft_push_b(t_list **stack_A, t_list **stack_B)
 {
 	int	i;
 	int	j;
-	int len;
-	int	*array_A;
+	int	len;
+	int	*array_a;
 
 	i = 0;
 	j = 0;
 	len = ft_list_len(*stack_B);
 	while (i < len)
 	{
-		if ((*stack_A)->content == ft_find_place(*stack_A, (*stack_B)->content, 'a'))
+		if ((*stack_A)->content
+			== ft_find_place(*stack_A, (*stack_B)->content, 'a'))
 		{
 			ft_push_between(stack_B, stack_A);
 			ft_printf("pa\n");
