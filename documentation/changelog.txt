@@ -110,3 +110,123 @@ DOMINGO 10/03:
 	Seguir con:
 		- cambiar printf por ft_printf
 		- Crear funciones de movimientos de stacks
+
+LUNES 11/03:
+
+	Cambios:
+		- funciones stack_ops (swap, push, rot_up, rot_down)
+
+	Seguir con:
+		- cambiar printf por ft_printf
+		- comprobar stack_ops
+
+JUEVES 14/03:
+
+	- Funciones stack_ops comprobadas
+	- Cambiado printf por ft_printf
+	
+	Seguir con:
+		- Cambiar prints de error a salida de errores?
+		- Algoritmo...
+		- funcion para Calcular movimientos necesarios para ordenacion
+
+SABADO 16/03:
+
+	Cambios:
+		- Planteado algoritmo mechanical_turk en forma de Codigo
+		- Escritas algunas de sus funciones (list_len, list_min, list_max, sort_three)
+		- Renombrados archivos list_utils y stack_ops->list_ops
+
+	Seguir con:
+		- Terminar funciones mechanical_turk
+			- Definir calculo de movimientos, etc
+		- Comprobar funciones escritas
+		- Cambiar prints de error a salida de errores?
+
+DOMINGO 17/03:
+
+	Cambios:
+		- Comprobadas list_min, list_max, list_len, sorted, sort_three
+		- medio planteado calculo de movimientos
+		- escritas funciones (moves_up, moves_down, moves_to_top)
+
+	Seguir con:
+		- Escribir funciones de calculos de movimientos combinados (rarb, rarrb, rrarb, rrarrb)
+		- comprobar funciones
+
+MARTES 19/03:
+
+	Cambios:
+		- Escritas funciones de calculo de movimientos (moves_calc y moves_comb)
+		- Cambios en ft_moves y mechanical_turk (parametros y parte del funcionamiento)
+		- Probada funcion ft_moves por encima
+		- Pasada norminette
+		- Idea para aplicar e imprimir movimientos ("copia" calculo movimientos combinados)
+		
+	Seguir con:
+		- Probar bien ft_moves y/o subfunciones
+		- Pensar en como imprimir movimientos
+		- Hacer EXAMEN!!!
+
+MIERCOLES 20/03:
+
+	Cambios:
+		- Empezado a escribir sort_number
+		- Escritas print_move y apply_move
+		
+	CUIDADO!! Cambiar funcion para recoger argumentos --> el primer argumento debe quedar en la cabeza del stack
+
+	Seguir con:
+		- Revisar todo lo de sort_number
+		- revisar el orden del stack inicial
+		- probar funciones
+
+SABADO 23/03:
+	
+	Cambios:
+		- cabeceras de varias funciones
+		- terminado apply_move
+		- creado y prbado tester para sort_number
+		- cambiada funcion find_place para poder usarla en ambos sentidos (con variable order)
+		- cambiado ft_sort, ahora calcula los dos numero a colocar en top y los pasa al resto de funcione
+
+	Seguir con:
+		- Comprobar finf_place (no funciona correctamente)
+
+DOMINGO 24/03:
+
+	Cambios:
+		- Comprobada y corregida la funcion find_place
+		- Corregidas funciones de apply_move y print_move
+		- Ajuste de i despues del primer bucle y eliminado bug de ";"
+		- sort_b aparentemente funcionando
+		- movidas funciones fastest_number, find_place, check_place y get_move a archivo sort_b 
+	
+	Seguir con: 
+		- Comprobacion del resto de mechanical_turk
+
+LUNES 25/03:
+
+	Cambios:
+		- mechanical_turk separada en funciones (creadas algunas funciones utilitarias)
+		- comprobado el funcionamiento
+		- cambiados printf-s por ft_printfs
+		- comentadas todas las funciones
+
+	Seguir con:
+		- comprobar paso final de mechanical_turk
+		- Probar a cambiar lst_add_front por add_back para no pasar a b y luego a A
+
+HITO: Mechanical turk aparentemente funcionando
+
+JUEVES 28/03:
+
+	Cambios:
+		- Cambiado error_handling para que imprima los errores por la salida esandar de errores
+		- Movido get_move dentro de apply_move y print_move para quitar un argumento
+		- Corregidos errores de norminette
+
+	Seguir con:
+		- Volver a comprobar mechanical_turk (push b)
+		- Terminar parte final de mechanical_turk
+		- Pasar tester

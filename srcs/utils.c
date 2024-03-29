@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
+//pasa un string a tipo long
 long	ft_atol(const char *s)
 {
 	size_t			i;
@@ -38,4 +39,23 @@ long	ft_atol(const char *s)
 	}
 	i++;
 	return (number * sign);
+}
+
+//Busca la posicion de el menor dentro de un array
+int	ft_min_index(int *array)
+{
+	int	i;
+	int	min;
+	int	index;
+
+	i = 0;
+	min = array[0];
+	index = 0;
+	while (i < 4)
+	{
+		if (min > array[i])
+			index = i;
+		i++;
+	}
+	return (index);
 }
