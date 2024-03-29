@@ -1,0 +1,42 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/03/29 13:27:03 by iubieta-          #+#    #+#              #
+#    Updated: 2024/03/29 13:27:03 by marvin           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = push_swap
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+INCLUDES = -I./include -I./libs/libft -I./libs/printf
+LIBS = -L./libs/libft -lft -L./libs/printf -lftprintf
+
+SRCS_DIR = ./srcs
+OBJS_DIR = ./objs
+SRCS = $(wildcard $(SRCS_DIR)/*.c)
+OBJS = $(SRCS:$(SRCS_DIR)/%.c=$(OBJS_DIR)/%.o)
+
+.PHONY: all clean fclean re
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
+	@ranlib $(NAME)
+
+$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
+	@mkdir -p $(OBJS_DIR)
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+clean:
+	@rm -rf $(OBJS_DIR)
+
+fclean: clean
+	@rm -f $(NAME)
+
+re: fclean all
