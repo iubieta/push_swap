@@ -18,6 +18,8 @@ void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B)
 	int	i;
 
 	i = 0;
+	if (ft_sorted(*stack_A))
+		return;
 	if (ft_list_len(*stack_A) == 2 && ft_sorted(*stack_A) == 0)
 	{
 		ft_swap_head(stack_A);
@@ -34,7 +36,7 @@ void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B)
 		ft_sort_three(stack_A);
 	if (*stack_B != NULL && ft_list_len(*stack_A) == 3)
 	{
-		ft_highest_at_top(stack_B);
+		//ft_highest_at_top(stack_B);
 		ft_push_b(stack_A, stack_B);
 	}
 	while (ft_sorted(*stack_A) == 0)

@@ -15,6 +15,8 @@
 //Ordena cualquier lista de 3 numeros
 void	ft_sort_three(t_list **list)
 {
+	if (ft_sorted(*list))
+		return;
 	if (ft_list_min(*list) == (*list)->content)
 	{
 		ft_swap_head(list);
