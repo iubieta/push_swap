@@ -250,9 +250,12 @@ SABADO 30/03:
 		- Añadido tester
 		- Modificado mechanical_turk para contemplar distintos casos
 		- Corregido sort_three (antes no imprimia los movimientos)
+		- Añadido caso de que incio este ordenado
+		- TODO OK PERO DEMASIADOS MOVIMIENTOS
 
 	Seguir con:
 		- Revisar mechanical turk (caso de 5 numeros y otros casos)
 		- Debuggear en general...
+		- Reducir movimientos (revisar mechanical_turk en general)
 		- Separar mechanical_turk por casos
 		- Separar sort_three en varias funciones
