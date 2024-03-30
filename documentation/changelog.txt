@@ -230,3 +230,21 @@ JUEVES 28/03:
 		- Volver a comprobar mechanical_turk (push b)
 		- Terminar parte final de mechanical_turk
 		- Pasar tester
+
+VIERNES 29/03:
+
+	Cambios:
+		- Reorganizacion de carpetas
+		- Makefile hecho
+
+	Seguir con:
+		- Revisar Makefile
+		- Cambiar print_moves para que imprima rr o rrr cuando ambos stacks roten en el mismo sentido
+
+HITO: Makefile hecho
+
+SABADO 30/03:
+
+	Cambios:
+		- Corregido Makefile
+		- Añadido tester

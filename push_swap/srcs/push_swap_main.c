@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_list	**stack_A;
 	t_list	**stack_B;
@@ -12,19 +12,10 @@ void	main(int argc, char **argv)
 	stack_A = &head_A;
 	stack_B = &head_B;
 	
-	printf("---------INICIO-----------\n");
 	if (ft_check_errors(argc, argv, stack_B) == 0)
-		return;
-	printf("Stack B:\n");
-	ft_print_list(head_B);
+		return(0);
 	while (head_B != NULL)
 		ft_push_between(stack_B, stack_A);
-	printf("Stack A:\n");
-	ft_print_list(head_A);
-	printf("-----MECHANICAL TURK------\n");
 	ft_mechanical_turk(stack_A, stack_B);
-	printf("----------END-------------\n");
-	printf("Stack A:\n");
-	ft_print_list(head_A);
-	return;
+	return(1);
 }

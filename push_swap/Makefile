@@ -13,8 +13,8 @@
 NAME = push_swap
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-INCLUDES = -I./include -I./libs/libft -I./libs/printf
-LIBS = -L./libs/libft -lft -L./libs/printf -lftprintf
+INCLUDES = -I./include -I./srcs/libs/libft -I./srcs/libs/printf
+LIBS = -L./srcs/libs/libft -lft -L./srcs/libs/printf -lftprintf
 
 SRCS_DIR = ./srcs
 OBJS_DIR = ./objs
@@ -26,8 +26,7 @@ OBJS = $(SRCS:$(SRCS_DIR)/%.c=$(OBJS_DIR)/%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ar rcs $(NAME) $(OBJS)
-	@ranlib $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) $(LIBS)
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
 	@mkdir -p $(OBJS_DIR)
