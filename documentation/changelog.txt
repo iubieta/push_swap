@@ -248,3 +248,11 @@ SABADO 30/03:
 	Cambios:
 		- Corregido Makefile
 		- Añadido tester
+		- Modificado mechanical_turk para contemplar distintos casos
+		- Corregido sort_three (antes no imprimia los movimientos)
+
+	Seguir con:
+		- Revisar mechanical turk (caso de 5 numeros y otros casos)
+		- Debuggear en general...
+		- Separar mechanical_turk por casos
+		- Separar sort_three en varias funciones

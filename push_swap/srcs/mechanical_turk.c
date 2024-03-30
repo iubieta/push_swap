@@ -15,14 +15,33 @@
 //Algoritmo para buscar la forma optima de ordenamiento
 void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B)
 {
-	ft_push_between(stack_A, stack_B);
-	ft_printf("pb\n");
-	ft_push_between(stack_A, stack_B);
-	ft_printf("pb\n");
-	ft_sort_b(stack_A, stack_B);
-	ft_sort_three(stack_A);
-	ft_highest_at_top(stack_B);
-	ft_push_b(stack_A, stack_B);
+	int	i;
+
+	i = 0;
+	if (ft_list_len(*stack_A) == 2 && ft_sorted(*stack_A) == 0)
+	{
+		ft_swap_head(stack_A);
+		ft_printf("sa\n");
+	}
+	while (ft_list_len(*stack_A) > 3 && i++ < 2)
+	{
+		ft_push_between(stack_A, stack_B);
+		ft_printf("pb\n");
+	}
+	if (*stack_B != NULL && ft_list_len(*stack_A) > 3)
+		ft_sort_b(stack_A, stack_B);
+	if (ft_list_len(*stack_A) == 3)
+		ft_sort_three(stack_A);
+	if (*stack_B != NULL && ft_list_len(*stack_A) == 3)
+	{
+		ft_highest_at_top(stack_B);
+		ft_push_b(stack_A, stack_B);
+	}
+	while (ft_sorted(*stack_A) == 0)
+	{
+		ft_rotate_down(stack_A);
+		ft_printf("rra\n");
+	}
 }
 	/*
 	faltaria ver si es necesario rotar A hasta que el minimo este en el top

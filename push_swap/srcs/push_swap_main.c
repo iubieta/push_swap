@@ -12,10 +12,19 @@ int	main(int argc, char **argv)
 	stack_A = &head_A;
 	stack_B = &head_B;
 	
+	//printf("---------INICIO-----------\n");
 	if (ft_check_errors(argc, argv, stack_B) == 0)
 		return(0);
-	while (head_B != NULL)
+/* 	printf("Stack B:\n");
+	ft_print_list(head_B);
+ */	while (head_B != NULL)
 		ft_push_between(stack_B, stack_A);
-	ft_mechanical_turk(stack_A, stack_B);
-	return(1);
+/* 	printf("Stack A:\n");
+	ft_print_list(head_A);
+	printf("-----MECHANICAL TURK------\n");
+ */	ft_mechanical_turk(stack_A, stack_B);
+/* 	printf("----------END-------------\n");
+	printf("Stack A:\n");
+	ft_print_list(head_A);
+ */	return(1);
 }
