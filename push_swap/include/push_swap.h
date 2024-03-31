@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/03/29 13:59:39 by marvin           ###   ########.fr       */
+/*   Updated: 2024/03/31 14:08:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int		ft_sorted(t_list *head);
 
 void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B);
 void	ft_highest_at_top(t_list **list);
+void	ft_lowest_at_top(t_list **list);
 void	ft_push_b(t_list **stack_A, t_list **stack_B);
 void	ft_sort_b(t_list **stack_A, t_list **stack_B);
 
