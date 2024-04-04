@@ -48,13 +48,17 @@ int	ft_min_index(int *array)
 	int	min;
 	int	index;
 
-	i = 0;
+	
 	min = array[0];
 	index = 0;
+	i = 1;
 	while (i < 4)
 	{
 		if (min > array[i])
+		{
+			min = array[i];
 			index = i;
+		}
 		i++;
 	}
 	return (index);

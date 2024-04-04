@@ -22,20 +22,35 @@ int	ft_fastest_number(t_list *head_A, t_list *head_B)
 	int		moves;
 	int		min_moves;
 
+	//printf("fastest number-----------------\n");
 	node = head_A;
 	fastest = node->content;
 	min_moves = INT_MAX;
 	while (node != NULL)
 	{
 		number = node->content;
+		//printf("\t number: %i\n",number);
 		moves = ft_moves(head_A, head_B, number);
+		//printf("\t moves: %i\n",moves);
 		if (moves < min_moves)
 		{
 			min_moves = moves;
 			fastest = number;
+			//printf("\t FASTER!\n");
+			//printf("\t new min moves: %i\n",min_moves);
+			//printf("\t new fastest num: %i\n",fastest);
 		}
 		node = node->next;
+		if (moves == 0)
+		{
+			//printf("\tmin moves: %i\n",min_moves);
+			//printf("\tfastest: %i\n", fastest);
+			return (fastest);
+		}
 	}
+	//printf("\t-----------\n");
+	//printf("\tmin moves: %i\n",min_moves);
+	//printf("\tfastest: %i\n", fastest);
 	return (fastest);
 }
 
@@ -109,7 +124,13 @@ int	ft_get_move(t_list *head_A, t_list *head_B, int a, int b)
 	moves[0] = ft_aup_bup(head_A, head_B, a, b);
 	moves[1] = ft_adown_bdown(head_A, head_B, a, b);
 	moves[2] = ft_aup_bdown(head_A, head_B, a, b);
-	moves[3] = ft_adown_bdown(head_A, head_B, a, b);
+	moves[3] = ft_adown_bup(head_A, head_B, a, b);
 	move = ft_min_index(moves);
+/* 	printf("0:%i\n", moves[0]);
+	printf("1:%i\n", moves[1]);
+	printf("2:%i\n", moves[2]);
+	printf("3:%i\n", moves[3]);
+	printf("move: %i moves: %i\n", move, moves[move]);
+	printf("----------------\n"); */
 	return (move);
 }

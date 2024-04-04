@@ -59,11 +59,18 @@ void	ft_sort_b(t_list **stack_A, t_list **stack_B)
 	len = ft_list_len(*stack_A);
 	while (i < len - 3)
 	{
+		
+		//printf("STACK A\tSTACK B\n");
+		//ft_print_2list(*stack_A,*stack_B);
+		//getchar();
 		fastest_number = ft_fastest_number(*stack_A, *stack_B);
+		//getchar();
 		ft_sort_num(stack_A, stack_B, fastest_number, 'd');
+		//getchar();
 		ft_push_between(stack_A, stack_B);
 		ft_printf("pb\n");
 		i++;
+		//getchar();
 	}
 }
 

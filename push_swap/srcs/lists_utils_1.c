@@ -48,6 +48,33 @@ void	ft_print_list(t_list *head)
 	}
 }
 
+//Imprime 2 listas en paralelo
+void	ft_print_2list(t_list *head_a, t_list *head_b)
+{
+	t_list	*node_a;
+	t_list	*node_b;
+
+	node_a = head_a;
+	node_b = head_b;
+	while (node_a || node_b)
+	{
+		if (node_a)
+		{
+			ft_printf("%i\t", node_a->content);
+			node_a = node_a->next;
+		}
+		else
+			ft_printf("\t");
+		if (node_b)
+		{
+			ft_printf("%i\n", node_b->content);
+			node_b = node_b->next;
+		}
+		else
+			ft_printf("\n");
+	}
+}
+
 //Libera los nodos de la lista y los asigna a NULL
 void	ft_free_list(t_list **list)
 {

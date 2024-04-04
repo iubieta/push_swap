@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/03/31 14:08:39 by marvin           ###   ########.fr       */
+/*   Updated: 2024/04/04 19:40:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <limits.h>
 # include "../srcs/libs/libft/libft.h"
 # include "../srcs/libs/printf/ft_printf.h"
-
 typedef struct s_list
 {
 	int				content;
@@ -38,6 +37,7 @@ int		ft_min_index(int *array);
 t_list	*ft_lst_new_node(int content);
 void	ft_lst_add_front(t_list **list, t_list *node);
 void	ft_print_list(t_list *head);
+void	ft_print_2list(t_list *head_a, t_list *head_b);
 void	ft_free_list(t_list **list);
 int		ft_exists_in_list(int number, t_list *head);
 
