@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:57:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2024/04/04 19:40:21 by marvin           ###   ########.fr       */
+/*   Updated: 2024/04/08 20:04:14 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <limits.h>
 # include "../srcs/libs/libft/libft.h"
 # include "../srcs/libs/printf/ft_printf.h"
+
 typedef struct s_list
 {
 	int				content;
@@ -53,6 +54,8 @@ int		ft_list_min(t_list *head);
 int		ft_list_max(t_list *head);
 
 void	ft_sort_three(t_list **list);
+void	ft_case_min_at_top(t_list **list);
+void	ft_case_max_at_top(t_list **list);
 int		ft_sorted(t_list *head);
 
 void	ft_mechanical_turk(t_list **stack_A, t_list **stack_B);

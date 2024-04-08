@@ -35,6 +35,39 @@ void	ft_lst_add_front(t_list **list, t_list *node)
 	}
 }
 
+//Libera los nodos de la lista y los asigna a NULL
+void	ft_free_list(t_list **list)
+{
+	t_list	*node;
+	t_list	*reference;
+
+	node = *list;
+	while (node != NULL)
+	{
+		reference = node;
+		node = node->next;
+		free(reference);
+		reference = NULL;
+	}
+	*list = NULL;
+}
+
+//Comprueba si un numero existe en la lista
+int	ft_exists_in_list(int number, t_list *head)
+{
+	t_list	*current_node;
+
+	current_node = head;
+	while (current_node != NULL)
+	{
+		if (current_node->content == number)
+			return (1);
+		current_node = current_node->next;
+	}
+	return (0);
+}
+
+/* 
 //Imprime una lista
 void	ft_print_list(t_list *head)
 {
@@ -73,36 +106,5 @@ void	ft_print_2list(t_list *head_a, t_list *head_b)
 		else
 			ft_printf("\n");
 	}
-}
-
-//Libera los nodos de la lista y los asigna a NULL
-void	ft_free_list(t_list **list)
-{
-	t_list	*node;
-	t_list	*reference;
-
-	node = *list;
-	while (node != NULL)
-	{
-		reference = node;
-		node = node->next;
-		free(reference);
-		reference = NULL;
-	}
-	*list = NULL;
-}
-
-//Comprueba si un numero existe en la lista
-int	ft_exists_in_list(int number, t_list *head)
-{
-	t_list	*current_node;
-
-	current_node = head;
-	while (current_node != NULL)
-	{
-		if (current_node->content == number)
-			return (1);
-		current_node = current_node->next;
-	}
-	return (0);
-}
+} 
+*/
