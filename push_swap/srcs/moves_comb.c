@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 //Calculo del numero de movimientos necesarios por cada combinacion
 //para colocar los stacks en posiciones correctas para ser pusheados

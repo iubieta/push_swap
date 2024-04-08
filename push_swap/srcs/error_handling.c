@@ -10,13 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 //Funcion principal para checkear los errores
 int	ft_check_errors(int argc, char **argv, t_list **stack)
 {
 	int		i;
-	int		num;
 	char	*argument;
 	char	*element;
 
@@ -37,6 +36,7 @@ int	ft_check_errors(int argc, char **argv, t_list **stack)
 			element = ft_next_element(element);
 		}
 	}
+	return (1);
 }
 
 //Avanza hasta el primer elemento del argumento

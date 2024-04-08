@@ -10,13 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 //pushea un nodo de una lista a otra 
 void	ft_push_between(t_list **origin, t_list **destiny)
 {
 	t_list	*origin_head;
-	t_list	*del;
 
 	if (*origin == NULL )
 		return ;

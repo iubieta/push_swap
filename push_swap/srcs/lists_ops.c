@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 //intercambia los dos primeros nodos
 void	ft_swap_head(t_list **list)

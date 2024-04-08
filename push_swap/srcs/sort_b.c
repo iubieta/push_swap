@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 //Busca el numero dentro de A que requiere menos movimientos 
 //para pasarlo a B en la posicion correcta
@@ -35,6 +35,8 @@ int	ft_fastest_number(t_list *head_A, t_list *head_B)
 			fastest = number;
 		}
 		node = node->next;
+		if (moves == 0)
+			return (fastest);
 	}
 	return (fastest);
 }
@@ -45,12 +47,11 @@ void	ft_sort_num(t_list **stack_A, t_list **stack_B, int number, char order)
 {
 	int	a;
 	int	b;
-	int	move;
 
 	a = number;
 	b = ft_find_place(*stack_B, a, order);
-	ft_print_move(move, *stack_A, *stack_B, a, b);
-	ft_apply_move(move, stack_A, stack_B, a, b);
+	ft_print_move(*stack_A, *stack_B, a, b);
+	ft_apply_move(stack_A, stack_B, a, b);
 }
 
 //Busca el numero que tiene que quedar debajo del numero que se quiere pushear
@@ -92,7 +93,7 @@ int	ft_check_place(t_list *head, int number, char order)
 		else
 			return (max);
 	}
-	else if (order == 'd')
+	else
 	{
 		if (min > number)
 			return (max);
@@ -106,12 +107,11 @@ int	ft_get_move(t_list *head_A, t_list *head_B, int a, int b)
 {
 	int	moves[4];
 	int	move;
-	int	i;
 
 	moves[0] = ft_aup_bup(head_A, head_B, a, b);
 	moves[1] = ft_adown_bdown(head_A, head_B, a, b);
 	moves[2] = ft_aup_bdown(head_A, head_B, a, b);
-	moves[3] = ft_adown_bdown(head_A, head_B, a, b);
+	moves[3] = ft_adown_bup(head_A, head_B, a, b);
 	move = ft_min_index(moves);
 	return (move);
 }

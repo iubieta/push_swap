@@ -1,232 +1,303 @@
-JUEVES 15/02:
-	Planteamiento del proyecto: objetivos, condiciones, algoritmo y funciones necesarias.
+INICIO
 
-	EMPEZAR CON:
-		- .h
-		- Makefile
-		- Gestion de errores
+	JUEVES 15/02:
+		Planteamiento del proyecto: objetivos, condiciones, algoritmo y funciones necesarias.
 
-LUNES 19/02:
-	
-	Notas:
-		- Usar linked_lists para stacks
+		EMPEZAR CON:
+			- .h
+			- Makefile
+			- Gestion de errores
 
-	Gestion de errores:
-		Opcion 1:
-			- 0 argumentos -> FIN
-			- 1 argumento -> Evaluar
-			- +1 argumento -> Juntar en uno y Evaluar
+	LUNES 19/02:
 		
-		Opcion 2:
-			- 0 argumentos -> FIN
-			- 1 argumento -> Evaluar
-			- +1 argumento -> Evaluar y siempre que no haya error juntar
+		Notas:
+			- Usar linked_lists para stacks
 
-MARTES 20/02:
+		Gestion de errores:
+			Opcion 1:
+				- 0 argumentos -> FIN
+				- 1 argumento -> Evaluar
+				- +1 argumento -> Juntar en uno y Evaluar
+			
+			Opcion 2:
+				- 0 argumentos -> FIN
+				- 1 argumento -> Evaluar
+				- +1 argumento -> Evaluar y siempre que no haya error juntar
 
-	Cambios:
-		- Definido el proceso de gestion de errores
-		- Reorganizacion de notas en notas y changelog
+	MARTES 20/02:
 
-SABADO 24/02:
+		Cambios:
+			- Definido el proceso de gestion de errores
+			- Reorganizacion de notas en notas y changelog
 
-	TAREAS:
-		- Funciones error_checker
+	SABADO 24/02:
 
-	Cambios:
-		- Funciones errores escritas (falta pushNumber)
+		TAREAS:
+			- Funciones error_checker
 
-DOMINGO 25/02:
+		Cambios:
+			- Funciones errores escritas (falta pushNumber)
 
-	TAREAS:
-		- Comprobar funciones error
+	DOMINGO 25/02:
 
-	Cambios:
-		- Funciones ft_nextElement y ft_checkElement comprobadas
+		TAREAS:
+			- Comprobar funciones error
 
-	Seguir con:
-		- Escribir pushElement
-			- linked_lists
+		Cambios:
+			- Funciones ft_nextElement y ft_checkElement comprobadas
 
-LUNES 26/02:
+		Seguir con:
+			- Escribir pushElement
+				- linked_lists
 
-	Cambios:
-		- Escrita y comprobada ft_puhsNumber
-		- Añadido stack en argumentos ft_checkErrors
+	LUNES 26/02:
 
-LUNES 04/03:
+		Cambios:
+			- Escrita y comprobada ft_puhsNumber
+			- Añadido stack en argumentos ft_checkErrors
 
-	Cambios:
-		- Antes de pushear numero checkearlo
+	LUNES 04/03:
 
-	Seguir con :
-		- Modificar atoi para que compruebe si el numero esta dentro de los limites de int
-		- Terminar de escribir check_number
+		Cambios:
+			- Antes de pushear numero checkearlo
 
-SABADO 09/03:
+		Seguir con :
+			- Modificar atoi para que compruebe si el numero esta dentro de los limites de int
+			- Terminar de escribir check_number
 
-	Cambios:
-		- check_number descartado
-		- sustituido atoi por atol (trabajar con longs) para comprobar tamaño (num = int)
-		- funcion ft_checkPush : Agrupa comprobacion de elemento y pusheralo
-			- pushNumber ahora en ft_checkPush
-		- todas las funciones que trabajan con la lista tienen como parametro (int_list **stack)
+	SABADO 09/03:
 
-	Notas:
-		- que pasa si metemos numeros directamente??
+		Cambios:
+			- check_number descartado
+			- sustituido atoi por atol (trabajar con longs) para comprobar tamaño (num = int)
+			- funcion ft_checkPush : Agrupa comprobacion de elemento y pusheralo
+				- pushNumber ahora en ft_checkPush
+			- todas las funciones que trabajan con la lista tienen como parametro (int_list **stack)
 
-	Seguir con:
-		- comprobar push en check_push
+		Notas:
+			- que pasa si metemos numeros directamente??
 
-DOMINGO 10/03:
+		Seguir con:
+			- comprobar push en check_push
 
-	Cambios:
-		- modificados los parametros de las funciones de listas:
-			Si modifican la lista -> int_list **list
-			Si solo iteran o imprimen -> int list *head
-		- rehecho checkErrors_main.c: inicializado stackA y headA y comprobar su liberacion
-		- Añadido ft_freeList para liberar la lista en caso de error
-		- Eliminada comprobacion de stack(innecesaria) de check_push y otras funciones
-		- renombrado archivo de gestion de errores: ft_check_errors -> error_handling
-		- GESTION DE ERRORES TERMINADA!!
-	
-	Seguir con:
-		- limpiar lineas de debug?
-		- Planteamiento de algoritmo y busqueda de optimizacion
-		- Makefile?
-		- Comentar funciones etc.
-		- Pasar norminette
+	DOMINGO 10/03:
 
-HITO: Gestion de errores TERMINADA
-
-DOMINGO 10/03:
-
-	Cambios:
-		- quitados printf de debug
-		- pasada norminette a medias (falta cambiar nombres con mayusculas)
-		- funciones comentadas
-		- Cambiados nombres de funciones y variables
-
-	Seguir con:
-		- cambiar printf por ft_printf
-		- Crear funciones de movimientos de stacks
-
-LUNES 11/03:
-
-	Cambios:
-		- funciones stack_ops (swap, push, rot_up, rot_down)
-
-	Seguir con:
-		- cambiar printf por ft_printf
-		- comprobar stack_ops
-
-JUEVES 14/03:
-
-	- Funciones stack_ops comprobadas
-	- Cambiado printf por ft_printf
-	
-	Seguir con:
-		- Cambiar prints de error a salida de errores?
-		- Algoritmo...
-		- funcion para Calcular movimientos necesarios para ordenacion
-
-SABADO 16/03:
-
-	Cambios:
-		- Planteado algoritmo mechanical_turk en forma de Codigo
-		- Escritas algunas de sus funciones (list_len, list_min, list_max, sort_three)
-		- Renombrados archivos list_utils y stack_ops->list_ops
-
-	Seguir con:
-		- Terminar funciones mechanical_turk
-			- Definir calculo de movimientos, etc
-		- Comprobar funciones escritas
-		- Cambiar prints de error a salida de errores?
-
-DOMINGO 17/03:
-
-	Cambios:
-		- Comprobadas list_min, list_max, list_len, sorted, sort_three
-		- medio planteado calculo de movimientos
-		- escritas funciones (moves_up, moves_down, moves_to_top)
-
-	Seguir con:
-		- Escribir funciones de calculos de movimientos combinados (rarb, rarrb, rrarb, rrarrb)
-		- comprobar funciones
-
-MARTES 19/03:
-
-	Cambios:
-		- Escritas funciones de calculo de movimientos (moves_calc y moves_comb)
-		- Cambios en ft_moves y mechanical_turk (parametros y parte del funcionamiento)
-		- Probada funcion ft_moves por encima
-		- Pasada norminette
-		- Idea para aplicar e imprimir movimientos ("copia" calculo movimientos combinados)
+		Cambios:
+			- modificados los parametros de las funciones de listas:
+				Si modifican la lista -> int_list **list
+				Si solo iteran o imprimen -> int list *head
+			- rehecho checkErrors_main.c: inicializado stackA y headA y comprobar su liberacion
+			- Añadido ft_freeList para liberar la lista en caso de error
+			- Eliminada comprobacion de stack(innecesaria) de check_push y otras funciones
+			- renombrado archivo de gestion de errores: ft_check_errors -> error_handling
+			- GESTION DE ERRORES TERMINADA!!
 		
-	Seguir con:
-		- Probar bien ft_moves y/o subfunciones
-		- Pensar en como imprimir movimientos
-		- Hacer EXAMEN!!!
+		Seguir con:
+			- limpiar lineas de debug?
+			- Planteamiento de algoritmo y busqueda de optimizacion
+			- Makefile?
+			- Comentar funciones etc.
+			- Pasar norminette
 
-MIERCOLES 20/03:
+HITO: Gestion de errores TERMINADA (DOMINGO 10/03)
 
-	Cambios:
-		- Empezado a escribir sort_number
-		- Escritas print_move y apply_move
+	DOMINGO 10/03:
+
+		Cambios:
+			- quitados printf de debug
+			- pasada norminette a medias (falta cambiar nombres con mayusculas)
+			- funciones comentadas
+			- Cambiados nombres de funciones y variables
+
+		Seguir con:
+			- cambiar printf por ft_printf
+			- Crear funciones de movimientos de stacks
+
+	LUNES 11/03:
+
+		Cambios:
+			- funciones stack_ops (swap, push, rot_up, rot_down)
+
+		Seguir con:
+			- cambiar printf por ft_printf
+			- comprobar stack_ops
+
+	JUEVES 14/03:
+
+		- Funciones stack_ops comprobadas
+		- Cambiado printf por ft_printf
 		
-	CUIDADO!! Cambiar funcion para recoger argumentos --> el primer argumento debe quedar en la cabeza del stack
+		Seguir con:
+			- Cambiar prints de error a salida de errores?
+			- Algoritmo...
+			- funcion para Calcular movimientos necesarios para ordenacion
 
-	Seguir con:
-		- Revisar todo lo de sort_number
-		- revisar el orden del stack inicial
-		- probar funciones
+	SABADO 16/03:
 
-SABADO 23/03:
-	
-	Cambios:
-		- cabeceras de varias funciones
-		- terminado apply_move
-		- creado y prbado tester para sort_number
-		- cambiada funcion find_place para poder usarla en ambos sentidos (con variable order)
-		- cambiado ft_sort, ahora calcula los dos numero a colocar en top y los pasa al resto de funcione
+		Cambios:
+			- Planteado algoritmo mechanical_turk en forma de Codigo
+			- Escritas algunas de sus funciones (list_len, list_min, list_max, sort_three)
+			- Renombrados archivos list_utils y stack_ops->list_ops
 
-	Seguir con:
-		- Comprobar finf_place (no funciona correctamente)
+		Seguir con:
+			- Terminar funciones mechanical_turk
+				- Definir calculo de movimientos, etc
+			- Comprobar funciones escritas
+			- Cambiar prints de error a salida de errores?
 
-DOMINGO 24/03:
+	DOMINGO 17/03:
 
-	Cambios:
-		- Comprobada y corregida la funcion find_place
-		- Corregidas funciones de apply_move y print_move
-		- Ajuste de i despues del primer bucle y eliminado bug de ";"
-		- sort_b aparentemente funcionando
-		- movidas funciones fastest_number, find_place, check_place y get_move a archivo sort_b 
-	
-	Seguir con: 
-		- Comprobacion del resto de mechanical_turk
+		Cambios:
+			- Comprobadas list_min, list_max, list_len, sorted, sort_three
+			- medio planteado calculo de movimientos
+			- escritas funciones (moves_up, moves_down, moves_to_top)
 
-LUNES 25/03:
+		Seguir con:
+			- Escribir funciones de calculos de movimientos combinados (rarb, rarrb, rrarb, rrarrb)
+			- comprobar funciones
 
-	Cambios:
-		- mechanical_turk separada en funciones (creadas algunas funciones utilitarias)
-		- comprobado el funcionamiento
-		- cambiados printf-s por ft_printfs
-		- comentadas todas las funciones
+	MARTES 19/03:
 
-	Seguir con:
-		- comprobar paso final de mechanical_turk
-		- Probar a cambiar lst_add_front por add_back para no pasar a b y luego a A
+		Cambios:
+			- Escritas funciones de calculo de movimientos (moves_calc y moves_comb)
+			- Cambios en ft_moves y mechanical_turk (parametros y parte del funcionamiento)
+			- Probada funcion ft_moves por encima
+			- Pasada norminette
+			- Idea para aplicar e imprimir movimientos ("copia" calculo movimientos combinados)
+			
+		Seguir con:
+			- Probar bien ft_moves y/o subfunciones
+			- Pensar en como imprimir movimientos
+			- Hacer EXAMEN!!!
 
-HITO: Mechanical turk aparentemente funcionando
+	MIERCOLES 20/03:
 
-JUEVES 28/03:
+		Cambios:
+			- Empezado a escribir sort_number
+			- Escritas print_move y apply_move
+			
+		CUIDADO!! Cambiar funcion para recoger argumentos --> el primer argumento debe quedar en la cabeza del stack
 
-	Cambios:
-		- Cambiado error_handling para que imprima los errores por la salida esandar de errores
-		- Movido get_move dentro de apply_move y print_move para quitar un argumento
-		- Corregidos errores de norminette
+		Seguir con:
+			- Revisar todo lo de sort_number
+			- revisar el orden del stack inicial
+			- probar funciones
 
-	Seguir con:
-		- Volver a comprobar mechanical_turk (push b)
-		- Terminar parte final de mechanical_turk
-		- Pasar tester
+	SABADO 23/03:
+		
+		Cambios:
+			- cabeceras de varias funciones
+			- terminado apply_move
+			- creado y prbado tester para sort_number
+			- cambiada funcion find_place para poder usarla en ambos sentidos (con variable order)
+			- cambiado ft_sort, ahora calcula los dos numero a colocar en top y los pasa al resto de funcione
+
+		Seguir con:
+			- Comprobar finf_place (no funciona correctamente)
+
+	DOMINGO 24/03:
+
+		Cambios:
+			- Comprobada y corregida la funcion find_place
+			- Corregidas funciones de apply_move y print_move
+			- Ajuste de i despues del primer bucle y eliminado bug de ";"
+			- sort_b aparentemente funcionando
+			- movidas funciones fastest_number, find_place, check_place y get_move a archivo sort_b 
+		
+		Seguir con: 
+			- Comprobacion del resto de mechanical_turk
+
+	LUNES 25/03:
+
+		Cambios:
+			- mechanical_turk separada en funciones (creadas algunas funciones utilitarias)
+			- comprobado el funcionamiento
+			- cambiados printf-s por ft_printfs
+			- comentadas todas las funciones
+
+		Seguir con:
+			- comprobar paso final de mechanical_turk
+			- Probar a cambiar lst_add_front por add_back para no pasar a b y luego a A
+
+HITO: Mechanical turk aparentemente funcionando (LUNES 25/03)
+
+	JUEVES 28/03:
+
+		Cambios:
+			- Cambiado error_handling para que imprima los errores por la salida esandar de errores
+			- Movido get_move dentro de apply_move y print_move para quitar un argumento
+			- Corregidos errores de norminette
+
+		Seguir con:
+			- Volver a comprobar mechanical_turk (push b)
+			- Terminar parte final de mechanical_turk
+			- Pasar tester
+
+	VIERNES 29/03:
+
+		Cambios:
+			- Reorganizacion de carpetas
+			- Makefile hecho
+
+		Seguir con:
+			- Revisar Makefile
+			- Cambiar print_moves para que imprima rr o rrr cuando ambos stacks roten en el mismo sentido
+
+HITO: Makefile hecho (VIERNES 29/03)
+
+	SABADO 30/03:
+
+		Cambios:
+			- Corregido Makefile
+			- Añadido tester
+			- Modificado mechanical_turk para contemplar distintos casos
+			- Corregido sort_three (antes no imprimia los movimientos)
+			- Añadido caso de que incio este ordenado
+			- TODO OK PERO DEMASIADOS MOVIMIENTOS
+
+		Seguir con:
+			- Revisar mechanical turk (caso de 5 numeros y otros casos)
+			- Debuggear en general...
+			- Reducir movimientos (revisar mechanical_turk en general)
+			- Separar mechanical_turk por casos
+			- Separar sort_three en varias funciones
+
+	DOMINGO 31/03:
+
+		Estado:
+			- Funcionando estable pero con demasiados movimientos
+
+		Cambios:
+			- Pequeñas correciones y pruebas
+			- Mechanical_turk funcinonando pero con demasiados movimientos
+
+		Seguir con:
+			- Revisar sort_b y en adelante
+
+	JUEVES 04/04:
+
+		Estado:
+			- Funcionando con muchos menos movimientos
+			- Con lineas de debug comentadas
+		
+		Cambios:
+			- Corregido fallo en get_move y moves_calc
+				- antes downdown estaba repetidp --> ahora es downup
+			- Corregido fallo en list_min --> no actualizaba el minimo
+
+		Seguir con:
+			- Pasar norminette
+			- Preparar para entrega
+			- Buscar reducir movimientos?? Mejor hacer otro proyecto
+
+HITO: Funcionando con buen rendimiento (JUEVES 04/04)
+
+	LUNES 08/04:
+
+		Cambios:
+			- Corregidos errores norminette
+			- Añadido ft_freeList al final del main
+
+		Seguir con:
+			- Buscar optimizacion
+			- Preparar entrega
