@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../include/push_swap.h"
+
 //Coloca el numero mas alto de B en el top
 void	ft_highest_at_top(t_list **list)
 {

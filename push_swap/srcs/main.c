@@ -28,5 +28,9 @@ int	main(int argc, char **argv)
 	while (head_b != NULL)
 		ft_push_between(stack_b, stack_a);
 	ft_mechanical_turk(stack_a, stack_b);
+	if (head_a)
+		ft_free_list(stack_a);
+	if (head_b)
+		ft_free_list(stack_b);
 	return (1);
 }
