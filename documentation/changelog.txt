@@ -291,3 +291,13 @@ HITO: Makefile hecho (VIERNES 29/03)
 			- Buscar reducir movimientos?? Mejor hacer otro proyecto
 
 HITO: Funcionando con buen rendimiento (JUEVES 04/04)
+
+	LUNES 08/04:
+
+		Cambios:
+			- Corregidos errores norminette
+			- Añadido ft_freeList al final del main
+
+		Seguir con:
+			- Buscar optimizacion
+			- Preparar entrega
