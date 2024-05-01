@@ -25,14 +25,19 @@ OBJS = $(SRCS:$(SRCS_DIR)/%.c=$(OBJS_DIR)/%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): libs $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) $(LIBS)
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
 	@mkdir -p $(OBJS_DIR)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+libs:
+	$(MAKE) -C ./srcs/libs/printf
+	$(MAKE) -C ./srcs/libs/libft
 
 clean:
+	$(MAKE) -C ./srcs/libs/printf fclean
+	$(MAKE) -C ./srcs/libs/libft fclean
 	@rm -rf $(OBJS_DIR)
 
 fclean: clean
