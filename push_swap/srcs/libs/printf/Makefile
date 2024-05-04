@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/30 19:10:42 by iubieta-          #+#    #+#              #
-#    Updated: 2023/11/02 15:39:48 by iubieta-         ###   ########.fr        #
+#    Updated: 2024/05/04 13:15:50 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,15 +19,17 @@ AR = ar csr
 RM = rm -rf
 
 all : ${NAME}
+	@touch ${NAME}
 
 ${NAME} : ${OBJS}
 	${AR} ${NAME} $^
+	@echo "PRINTF COMPILED\n"
 
 clean :
-	${RM} ${OBJS}
+	@${RM} ${OBJS}
 
 fclean : clean
-	${RM} ${NAME}
+	@${RM} ${NAME}
 
 re : fclean all
 

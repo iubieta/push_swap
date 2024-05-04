@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 15:38:39 by iubieta-          #+#    #+#              #
-#    Updated: 2023/10/21 18:59:59 by iubieta-         ###   ########.fr        #
+#    Updated: 2024/05/04 13:15:46 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,20 +21,23 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar csr
 RM = rm -rf
 
-all : ${OBJS}
-	${AR} ${NAME} ${OBJS}
+all : ${NAME}
+	@touch ${NAME}
 
 ${NAME} : ${OBJS} ${INCLUDE}
 	${AR} ${NAME} $^
+	@echo "LIBFT COMPILED\n"
 
 bonus: ${OBJS} ${BONUS_OBJS} ${INCLUDE}
 	${AR} ${NAME} ${OBJS} ${BONUS_OBJS}
+	@echo "LIBFT BONUS COMPILED\n"
 
 clean :
-	${RM} ${OBJS} ${BONUS_OBJS}
+	@${RM} ${OBJS} ${BONUS_OBJS}
 
 fclean : clean
-	${RM} ${NAME}
+	@${RM} ${NAME}
+	@echo "CLEANED"
 
 re : fclean all
 
